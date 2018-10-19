@@ -3,37 +3,40 @@
 }
 #dropdown-menu-g .nav .link,
 #dropdown-menu-g .dropdown-item {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #ffffff;
 }
 #dropdown-menu-g .navbar,
 #dropdown-menu-g .dropdown-menu {
-  background: #333333;
+  background: #28324e;
 }
 #dropdown-menu-g .dropdown-menu .dropdown-toggle[aria-expanded="true"],
 #dropdown-menu-g .dropdown-menu a:hover,
 #dropdown-menu-g .dropdown-menu a:focus {
-  background: #292929;
+  background: #212941;
 }
 #dropdown-menu-g .navbar-toggler {
   color: #ffffff;
+}
+#social-buttons1-e .mbr-header__text {
+  color: #475577;
 }
 #dropdown-menu-j .hide-buttons [data-button] {
   display: none !important;
 }
 #dropdown-menu-j .nav .link,
 #dropdown-menu-j .dropdown-item {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #ffffff;
 }
 #dropdown-menu-j .navbar,
 #dropdown-menu-j .dropdown-menu {
-  background: #333333;
+  background: #28324e;
 }
 #dropdown-menu-j .dropdown-menu .dropdown-toggle[aria-expanded="true"],
 #dropdown-menu-j .dropdown-menu a:hover,
 #dropdown-menu-j .dropdown-menu a:focus {
-  background: #292929;
+  background: #212941;
 }
 #dropdown-menu-j .navbar-toggler {
   color: #ffffff;
@@ -44,22 +47,45 @@
 #msg-box3-17 .mbr-header .mbr-header__subtext {
   text-align: center;
 }
+#dropdown-menu-18 .hide-buttons [data-button] {
+  display: none !important;
+}
+#dropdown-menu-18 .nav .link,
+#dropdown-menu-18 .dropdown-item {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+#dropdown-menu-18 .navbar,
+#dropdown-menu-18 .dropdown-menu {
+  background: #28324e;
+}
+#dropdown-menu-18 .dropdown-menu .dropdown-toggle[aria-expanded="true"],
+#dropdown-menu-18 .dropdown-menu a:hover,
+#dropdown-menu-18 .dropdown-menu a:focus {
+  background: #212941;
+}
+#dropdown-menu-18 .navbar-toggler {
+  color: #ffffff;
+}
+#social-buttons1-1a .mbr-header__text {
+  color: #475577;
+}
 #dropdown-menu-h .hide-buttons [data-button] {
   display: none !important;
 }
 #dropdown-menu-h .nav .link,
 #dropdown-menu-h .dropdown-item {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #ffffff;
 }
 #dropdown-menu-h .navbar,
 #dropdown-menu-h .dropdown-menu {
-  background: #333333;
+  background: #28324e;
 }
 #dropdown-menu-h .dropdown-menu .dropdown-toggle[aria-expanded="true"],
 #dropdown-menu-h .dropdown-menu a:hover,
 #dropdown-menu-h .dropdown-menu a:focus {
-  background: #292929;
+  background: #212941;
 }
 #dropdown-menu-h .navbar-toggler {
   color: #ffffff;
