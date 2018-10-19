@@ -1,21 +1,12 @@
-1  --- 
-2  --- 
-3  <?xml version="1.0" encoding="UTF-8"?> 
-4  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
-5      {% for post in site.posts %} 
-6      <url> 
-7          <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc> 
-8      </url> 
-9      {% endfor %} 
-10  
- 
-11      {% for page in site.pages %} 
-12      {% if page.layout != nil %} 
-13      {% if page.layout != 'feed' %} 
-14      <url> 
-15          <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc> 
-16      </url> 
-17      {% endif %} 
-18      {% endif %} 
-19      {% endfor %} 
-20  </urlset> 
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+
+
+</urlset>
