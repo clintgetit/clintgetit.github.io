@@ -1,17 +1,19 @@
 {
   "settings": {
     "name": "ClintGetIT.com",
-    "currentPage": "ios.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "default",
       "title": "Mobirise",
       "styling": {},
-      "additionalSetColors": []
+      "additionalSetColors": [
+        "#252525"
+      ]
     },
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.8.6",
     "siteFonts": [],
-    "uniqCompNum": 64,
+    "uniqCompNum": 113,
     "versionPublish": "4.8.6",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -71,12 +73,12 @@
           "logo": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/logo.png",
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
               "class": "",
               "height": 128,
-              "alt": "Mobirise",
-              "link": "https://mobirise.com",
-              "title": "",
+              "alt": "ClintGetIT.com",
+              "link": "https://clintgetit.github.io/",
+              "title": "ClintGetIT.com",
               "linkInNewWindow": false
             }
           },
@@ -116,7 +118,12 @@
           ],
           "_afterNavbarItem": ".mbr-section > .mbr-box__magnet",
           "_name": "header2",
-          "_anchor": "header2-7"
+          "_anchor": "header2-7",
+          "_customHTML": "<section class=\"mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted\" data-rv-view=\"13\" style=\"background-color: rgb(40, 50, 78);\">\n    <div class=\"mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar\">\n        \n        <div class=\"mbr-box__container mbr-section__container container\">\n            <div class=\"mbr-box mbr-box--stretched\"><div class=\"mbr-box__magnet mbr-box__magnet--center-left\">\n                <div class=\"row\"><div class=\" col-sm-6 col-sm-offset-6\">\n                    <div class=\"mbr-hero animated fadeInUp\">\n                        <h1 class=\"mbr-hero__text mbr-editable-content\" code-editable-id=\"49\">ClintGetIT.com</h1>\n                        <p class=\"mbr-hero__subtext mbr-editable-content\" code-editable-id=\"50\">Clint's space for Information Techonology </p>\n                    </div>\n                    <div class=\"mbr-buttons btn-inverse mbr-buttons--left\"><a class=\"mbr-buttons__btn btn btn-lg btn-warning animated fadeInUp delay mbr-editable-button\" href=\"https://clintgetit.github.io/\" code-editable-id=\"51\">LEARN MORE</a></div>\n                </div></div>\n            </div></div>\n        </div>\n        \n    </div>\n</section>",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_customCSS": "",
+          "_customTemplate": true
         },
         {
           "_params": {
@@ -136,7 +143,7 @@
             "google": true,
             "twitter": true
           },
-          "text": "SHARE WITH YOU!",
+          "text": "Share with &nbsp;you!",
           "_tags": [
             "Theme"
           ],
@@ -156,7 +163,7 @@
             "bgImage": "images/bg3.jpg",
             "parallax": true,
             "bgColorRadio": true,
-            "bgColor": "#3c3c3c",
+            "bgColor": "#475577",
             "overlay": true,
             "overlayColor": "#3C3C3C",
             "overlayOpacity": 0.8
@@ -196,7 +203,12 @@
             "Theme"
           ],
           "_name": "contacts3",
-          "_anchor": "contacts3-f"
+          "_anchor": "contacts3-f",
+          "_styles": {
+            "STRONG": {
+              "color": "#efefef"
+            }
+          }
         }
       ]
     },
@@ -204,7 +216,7 @@
       "settings": {
         "meta_descr": "Web Page Builder Description",
         "title": "IT_1",
-        "order": 4
+        "order": 8
       },
       "components": [
         {
@@ -242,12 +254,12 @@
           "logo": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/logo.png",
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
               "class": "",
               "height": 128,
-              "alt": "Mobirise",
-              "link": "https://mobirise.com",
-              "title": "",
+              "alt": "ClintGetIT.com",
+              "link": "https://clintgetit.github.io/",
+              "title": "ClintGetIT.com",
               "linkInNewWindow": false
             }
           },
@@ -308,7 +320,7 @@
         "header_custom": "",
         "footer_custom": "",
         "html_before": "",
-        "order": 1
+        "order": 5
       },
       "components": [
         {
@@ -407,7 +419,7 @@
             "bgImage": "images/bg3.jpg",
             "parallax": true,
             "bgColorRadio": true,
-            "bgColor": "#444444",
+            "bgColor": "#475577",
             "overlay": true,
             "overlayColor": "#444444",
             "overlayOpacity": 0.8
@@ -462,36 +474,6 @@
           ],
           "_name": "msg-box2",
           "_anchor": "msg-box2-1j"
-        },
-        {
-          "_params": {
-            "inverse": false,
-            "paddingTop": "1",
-            "paddingBottom": "0",
-            "bgImageRadio": false,
-            "bgImage": "images/bg3.jpg",
-            "parallax": true,
-            "bgColorRadio": true,
-            "bgColor": "#fff",
-            "overlay": false,
-            "overlayColor": "#222",
-            "overlayOpacity": 0.5,
-            "counters": true,
-            "facebook": true,
-            "google": true,
-            "twitter": true
-          },
-          "text": "SHARE WITH YOU!",
-          "_tags": [
-            "Theme"
-          ],
-          "_name": "social-buttons1",
-          "_styles": {
-            ".mbr-header__text": {
-              "color": "#475577"
-            }
-          },
-          "_anchor": "social-buttons1-1a"
         }
       ]
     },
@@ -499,7 +481,7 @@
       "settings": {
         "meta_descr": "TEST",
         "title": "ios",
-        "order": 2
+        "order": 6
       },
       "components": [
         {
@@ -774,7 +756,7 @@
             "bgImage": "images/bg3.jpg",
             "parallax": true,
             "bgColorRadio": true,
-            "bgColor": "#444444",
+            "bgColor": "#475577",
             "overlay": true,
             "overlayColor": "#444444",
             "overlayOpacity": 0.8
@@ -792,7 +774,7 @@
       "settings": {
         "meta_descr": "TEST",
         "title": "ios_1",
-        "order": 3
+        "order": 7
       },
       "components": [
         {
@@ -946,7 +928,7 @@
             "bgImage": "images/bg3.jpg",
             "parallax": true,
             "bgColorRadio": true,
-            "bgColor": "#444444",
+            "bgColor": "#475577",
             "overlay": true,
             "overlayColor": "#444444",
             "overlayOpacity": 0.8
@@ -957,6 +939,801 @@
           ],
           "_name": "footer1",
           "_anchor": "footer1-1n"
+        }
+      ]
+    },
+    "IT.html": {
+      "settings": {
+        "title": "IT",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 1
+      },
+      "components": [
+        {
+          "_styles": {
+            ".hide-buttons [data-button]": {
+              "display": "none !important"
+            },
+            ".navbar-brand a": {},
+            ".nav .link, .dropdown-item": {
+              "font-size": "1.2em",
+              "color": "#ffffff"
+            },
+            ".navbar, .dropdown-menu": {
+              "background": "#475577"
+            },
+            ".dropdown-menu .dropdown-toggle[aria-expanded=\"true\"], .dropdown-menu a:hover, .dropdown-menu a:focus": {
+              "background": "#3f4c6a"
+            },
+            ".navbar-toggler": {
+              "color": "#ffffff"
+            }
+          },
+          "_params": {
+            "logo": true,
+            "showBrand": true,
+            "hideButtons": true,
+            "sticky": true,
+            "transparent": true,
+            "bgColor": "#475577",
+            "fontSize": "1.2",
+            "fontName": {},
+            "fontColor": "#ffffff"
+          },
+          "items": "<li class=\"nav-item\"><a data-app-btn=\"true\" class=\"nav-link link\" href=\"https://mobirise.com/\">HOME</a></li><li class=\"nav-item dropdown open\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"true\">IT</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"ios.html\">ios</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"tel:+1-6157889964\">SAP</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"tel:+1-6157889964\">TEST<br></a><div class=\"dropdown\"><a data-app-btn=\"true\" class=\"dropdown-item dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">Trendy IT</a><div class=\"dropdown-menu dropdown-submenu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact forms</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image gallery</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Mobile menu</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google maps</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Social buttons</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google fonts</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Video background</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image/content slider</a></div></div></div></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">ABOUT</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"http://forums.mobirise.com/\">Forum</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Tutorials</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact us</a></div></li><li class=\"nav-item nav-btn\"><a data-app-btn=\"true\" data-button=\"\" data-app-selector=\".btn\" class=\"nav-link btn btn-default btn-default-outline\" href=\"https://mobirise.com/\">DOWNLOAD</a></li>",
+          "logo": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
+              "class": "",
+              "height": 128,
+              "alt": "ClintGetIT.com",
+              "link": "https://clintgetit.github.io/",
+              "title": "ClintGetIT.com",
+              "linkInNewWindow": false
+            }
+          },
+          "brand": "<a class=\"text-white\" data-app-selector=\".navbar-brand a\" data-app-btn=\"true\" href=\"https://clintgetit.github.io/ \" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">ClintGetIT.com<br><br></a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "dropdown-menu",
+          "_anchor": "dropdown-menu-20"
+        },
+        {
+          "_inherit": "header1",
+          "_params": {
+            "showTitle": true,
+            "showText": true,
+            "showButtons": true,
+            "showArrow": false,
+            "contentAlign": "right",
+            "bgImageRadio": false,
+            "bgImage": "images/bg2.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#28324e",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "ClintGetIT.com",
+          "text": "Clint's space for Information Techonology ",
+          "buttons": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-warning animated fadeInUp delay\" href=\"https://clintgetit.github.io/\" data-toolbar=\"-mbrBtnMove\">LEARN MORE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_afterNavbarItem": ".mbr-section > .mbr-box__magnet",
+          "_name": "header2",
+          "_customHTML": "<section class=\"mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted\" data-rv-view=\"13\" style=\"background-color: rgb(40, 50, 78);\">\n    <div class=\"mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar\">\n        \n        <div class=\"mbr-box__container mbr-section__container container\">\n            <div class=\"mbr-box mbr-box--stretched\"><div class=\"mbr-box__magnet mbr-box__magnet--center-left\">\n                <div class=\"row\"><div class=\" col-sm-6 col-sm-offset-6\">\n                    <div class=\"mbr-hero animated fadeInUp\">\n                        <h1 class=\"mbr-hero__text mbr-editable-content\" code-editable-id=\"97\">ClintGetIT.com</h1>\n                        <p class=\"mbr-hero__subtext mbr-editable-content\" code-editable-id=\"98\">Clint's space for Information Techonology </p>\n                    </div>\n                    <div class=\"mbr-buttons btn-inverse mbr-buttons--left\"><a class=\"mbr-buttons__btn btn btn-lg btn-warning animated fadeInUp delay mbr-editable-button\" href=\"https://clintgetit.github.io/\" code-editable-id=\"99\">LEARN MORE</a></div>\n                </div></div>\n            </div></div>\n        </div>\n        \n    </div>\n</section>",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_customCSS": "",
+          "_customTemplate": true,
+          "_anchor": "header2-21"
+        },
+        {
+          "_params": {
+            "inverse": false,
+            "paddingTop": "1",
+            "paddingBottom": "0",
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5,
+            "counters": true,
+            "facebook": true,
+            "google": true,
+            "twitter": true
+          },
+          "text": "Share with &nbsp;you!",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "social-buttons1",
+          "_styles": {
+            ".mbr-header__text": {
+              "color": "#475577"
+            }
+          },
+          "_anchor": "social-buttons1-22"
+        },
+        {
+          "_params": {
+            "paddingTop": 3,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#475577",
+            "overlay": true,
+            "overlayColor": "#3C3C3C",
+            "overlayOpacity": 0.8
+          },
+          "buttons": "<a data-app-btn=\"true\" type=\"submit\" class=\"mbr-buttons__btn btn btn-danger\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove,-mbrBtnRemove\">CONTACT US</a>",
+          "text1": "<strong>ADDRESS</strong><br>Franklin, TN 37064<br><br>\n<strong>CONTACTS</strong><br>\nEmail: yzu2000@gmail.com<br><br>Copyright © 2018. All Rights Reserved.&nbsp;<br><br><br>",
+          "text2": "<p class=\"mbr-contacts__text\"><strong>LINKS</strong></p><ul class=\"mbr-contacts__list\"><li><br></li><li><br></li><li><br></li></ul>",
+          "form": {
+            "title": "MESSAGE",
+            "action": "yzu2000@gmail.com",
+            "alerts": {
+              "success": "Thanks for filling out form!"
+            },
+            "fields": {
+              "name": {
+                "visible": false,
+                "title": "Name",
+                "customTitle": "Name*"
+              },
+              "email": {
+                "visible": true,
+                "title": "Email",
+                "customTitle": "Email*"
+              },
+              "phone": {
+                "visible": false,
+                "title": "Phone",
+                "customTitle": "Phone"
+              },
+              "message": {
+                "title": "Message",
+                "customTitle": "Message"
+              }
+            }
+          },
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "contacts3",
+          "_styles": {
+            "STRONG": {
+              "color": "#efefef"
+            }
+          },
+          "_anchor": "contacts3-23"
+        }
+      ]
+    },
+    "iosM.html": {
+      "settings": {
+        "title": "ios",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 2
+      },
+      "components": [
+        {
+          "_styles": {
+            ".hide-buttons [data-button]": {
+              "display": "none !important"
+            },
+            ".navbar-brand a": {},
+            ".nav .link, .dropdown-item": {
+              "font-size": "1.2em",
+              "color": "#ffffff"
+            },
+            ".navbar, .dropdown-menu": {
+              "background": "#475577"
+            },
+            ".dropdown-menu .dropdown-toggle[aria-expanded=\"true\"], .dropdown-menu a:hover, .dropdown-menu a:focus": {
+              "background": "#3f4c6a"
+            },
+            ".navbar-toggler": {
+              "color": "#ffffff"
+            }
+          },
+          "_params": {
+            "logo": true,
+            "showBrand": true,
+            "hideButtons": true,
+            "sticky": true,
+            "transparent": true,
+            "bgColor": "#475577",
+            "fontSize": "1.2",
+            "fontName": {},
+            "fontColor": "#ffffff"
+          },
+          "items": "<li class=\"nav-item\"><a data-app-btn=\"true\" class=\"nav-link link\" href=\"https://mobirise.com/\">HOME</a></li><li class=\"nav-item dropdown open\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"true\">IT</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"ios.html\">ios</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"tel:+1-6157889964\">SAP</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"tel:+1-6157889964\">TEST<br></a><div class=\"dropdown\"><a data-app-btn=\"true\" class=\"dropdown-item dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">Trendy IT</a><div class=\"dropdown-menu dropdown-submenu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact forms</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image gallery</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Mobile menu</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google maps</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Social buttons</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google fonts</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Video background</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image/content slider</a></div></div></div></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">ABOUT</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"http://forums.mobirise.com/\">Forum</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Tutorials</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact us</a></div></li><li class=\"nav-item nav-btn\"><a data-app-btn=\"true\" data-button=\"\" data-app-selector=\".btn\" class=\"nav-link btn btn-default btn-default-outline\" href=\"https://mobirise.com/\">DOWNLOAD</a></li>",
+          "logo": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
+              "class": "",
+              "height": 128,
+              "alt": "ClintGetIT.com",
+              "link": "https://clintgetit.github.io/",
+              "title": "ClintGetIT.com",
+              "linkInNewWindow": false
+            }
+          },
+          "brand": "<a class=\"text-white\" data-app-selector=\".navbar-brand a\" data-app-btn=\"true\" href=\"https://clintgetit.github.io/ \" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">ClintGetIT.com<br><br></a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "dropdown-menu",
+          "_anchor": "dropdown-menu-24"
+        },
+        {
+          "_inherit": "msg-box1",
+          "_styles": {
+            ".mbr-header .mbr-header__text": {
+              "color": "#252525"
+            },
+            ".mbr-article": {
+              "color": "#252525"
+            }
+          },
+          "_params": {
+            "showTitle": true,
+            "showText": false,
+            "showButtons": false,
+            "paddingTop": 2,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "1.How can I make a site search on google from a Github site?",
+          "text": "",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">TRY FOR FREE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box2",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--short-paddings\" data-rv-view=\"161\" style=\"background-color: rgb(255, 255, 255);\">\n\n    \n\n    <div class=\"mbr-section__container mbr-section__container--isolated container\" style=\"padding-top: 10px; padding-bottom: 10px; bodder = 1px;\">\n        <div class=\"row\">\n            <div class=\"mbr-box mbr-box--fixed mbr-box--adapted\">\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__left col-sm-12\">\n                    <div class=\"mbr-section__container\">\n                        <div class=\"mbr-header mbr-header--auto-align mbr-header--wysiwyg\">\n                            <h3 class=\"mbr-header__text mbr-editable-content\" style=\"font-family: Roboto, sans-serif; font-size: 17px; text-align: left; color: rgb(71, 85, 119);\" code-editable-id=\"235\"><a href=\"iod_detail_001.html\">1.How can I make a site search on google from a Github site?</a><br><br><br><br><br><br><br><br><br><br><br><br><br><br></h3>\n                        </div>\n                    </div>\n                    \n                </div>\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__right col-sm-4\">\n                    \n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_customCSS": "@import url(undefined);\n@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lora:400,700);\n@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n.mbr-header .mbr-header__text {\n  color: #252525;\n  font-size: 20px;\n}\n.mbr-article {\n  color: #252525;\n}\n",
+          "_customTemplate": true,
+          "_anchor": "msg-box2-2k",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
+        },
+        {
+          "_params": {
+            "paddingTop": "2",
+            "paddingBottom": "2",
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#475577",
+            "overlay": true,
+            "overlayColor": "#444444",
+            "overlayOpacity": 0.8
+          },
+          "text": "Copyright (c) 2018 ClintGetIT.com",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "footer1",
+          "_anchor": "footer1-1n"
+        }
+      ]
+    },
+    "ios_index.html": {
+      "settings": {
+        "title": "ios_index",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 3
+      },
+      "components": [
+        {
+          "_styles": {
+            ".hide-buttons [data-button]": {
+              "display": "none !important"
+            },
+            ".navbar-brand a": {},
+            ".nav .link, .dropdown-item": {
+              "font-size": "1.2em",
+              "color": "#ffffff"
+            },
+            ".navbar, .dropdown-menu": {
+              "background": "#475577"
+            },
+            ".dropdown-menu .dropdown-toggle[aria-expanded=\"true\"], .dropdown-menu a:hover, .dropdown-menu a:focus": {
+              "background": "#3f4c6a"
+            },
+            ".navbar-toggler": {
+              "color": "#ffffff"
+            }
+          },
+          "_params": {
+            "logo": true,
+            "showBrand": true,
+            "hideButtons": true,
+            "sticky": true,
+            "transparent": true,
+            "bgColor": "#475577",
+            "fontSize": "1.2",
+            "fontName": {},
+            "fontColor": "#ffffff"
+          },
+          "items": "<li class=\"nav-item\"><a data-app-btn=\"true\" class=\"nav-link link\" href=\"https://mobirise.com/\">HOME</a></li><li class=\"nav-item dropdown open\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"true\">IT</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"ios.html\">ios</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"tel:+1-6157889964\">SAP</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"tel:+1-6157889964\">TEST<br></a><div class=\"dropdown\"><a data-app-btn=\"true\" class=\"dropdown-item dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">Trendy IT</a><div class=\"dropdown-menu dropdown-submenu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact forms</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image gallery</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Mobile menu</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google maps</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Social buttons</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google fonts</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Video background</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image/content slider</a></div></div></div></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">ABOUT</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"http://forums.mobirise.com/\">Forum</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Tutorials</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact us</a></div></li><li class=\"nav-item nav-btn\"><a data-app-btn=\"true\" data-button=\"\" data-app-selector=\".btn\" class=\"nav-link btn btn-default btn-default-outline\" href=\"https://mobirise.com/\">DOWNLOAD</a></li>",
+          "logo": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
+              "class": "",
+              "height": 128,
+              "alt": "ClintGetIT.com",
+              "link": "https://clintgetit.github.io/",
+              "title": "ClintGetIT.com",
+              "linkInNewWindow": false
+            }
+          },
+          "brand": "<a class=\"text-white\" data-app-selector=\".navbar-brand a\" data-app-btn=\"true\" href=\"https://clintgetit.github.io/ \" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">ClintGetIT.com<br><br></a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "dropdown-menu",
+          "_anchor": "dropdown-menu-2o"
+        },
+        {
+          "_params": {
+            "inverse": false,
+            "paddingTop": "1",
+            "paddingBottom": "0",
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5,
+            "counters": true,
+            "facebook": true,
+            "google": true,
+            "twitter": true
+          },
+          "text": "Share with &nbsp;you!",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "social-buttons1",
+          "_styles": {
+            ".mbr-header__text": {
+              "color": "#475577"
+            }
+          },
+          "_anchor": "social-buttons1-2p"
+        },
+        {
+          "_inherit": "msg-box1",
+          "_params": {
+            "showTitle": true,
+            "showText": false,
+            "showButtons": false,
+            "paddingTop": 2,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "1.How can I make a site search on google from a Github site?",
+          "text": "",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">TRY FOR FREE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box2",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--short-paddings\" data-rv-view=\"161\" style=\"background-color: rgb(255, 255, 255);\">\n\n    \n\n    <div class=\"mbr-section__container mbr-section__container--isolated container\" style=\"padding-top: 10px; padding-bottom: 10px;\">\n        <div class=\"row\">\n            <div class=\"mbr-box mbr-box--fixed mbr-box--adapted\">\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__left col-sm-12\">\n                    <div class=\"mbr-section__container\">\n                        <div class=\"mbr-header mbr-header--auto-align mbr-header--wysiwyg\">\n                            <h3 class=\"mbr-header__text mbr-editable-content\" style=\"font-family: Roboto, sans-serif; font-size: 17px; text-align: left; color: rgb(71, 85, 119);\" code-editable-id=\"198\">1.How can I make a site search on google from a Github site?</h3>\n                        </div>\n                    </div>\n                    \n                </div>\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__right col-sm-4\">\n                    \n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_customCSS": "@import url(undefined);\n@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lora:400,700);\n@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n.mbr-header .mbr-header__text {\n  color: #252525;\n  font-size: 20px;\n}\n.mbr-article {\n  color: #252525;\n}\n",
+          "_customTemplate": true,
+          "_anchor": "msg-box2-2q"
+        },
+        {
+          "_inherit": "msg-box1",
+          "_styles": {
+            ".mbr-header .mbr-header__text": {
+              "color": "#252525"
+            },
+            ".mbr-article": {
+              "color": "#252525"
+            }
+          },
+          "_params": {
+            "showTitle": true,
+            "showText": false,
+            "showButtons": false,
+            "paddingTop": 2,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "1.How can I make a site search on google from a Github site?",
+          "text": "",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">TRY FOR FREE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box2",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--short-paddings\" data-rv-view=\"161\" style=\"background-color: rgb(255, 255, 255);\">\n\n    \n\n    <div class=\"mbr-section__container mbr-section__container--isolated container\" style=\"padding-top: 5px; padding-bottom: 5px;\">\n        <div class=\"row\">\n            <div class=\"mbr-box mbr-box--fixed mbr-box--adapted\">\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__left col-sm-12\">\n                    <div class=\"mbr-section__container\">\n                        <div class=\"mbr-header mbr-header--auto-align mbr-header--wysiwyg\">\n                            <h3 class=\"mbr-header__text mbr-editable-content\" style=\"font-family: Roboto, sans-serif; font-size: 17px; text-align: left; color: rgb(71, 85, 119);\" code-editable-id=\"196\">1.How can I make a site search on google from a Github site?</h3>\n                        </div>\n                    </div>\n                    \n                </div>\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__right col-sm-4\">\n                    \n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_customCSS": "@import url(undefined);\n@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lora:400,700);\n@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n.mbr-header .mbr-header__text {\n  color: #252525;\n  font-size: 20px;\n}\n.mbr-article {\n  color: #252525;\n}\n",
+          "_customTemplate": true,
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_anchor": "msg-box2-2r"
+        },
+        {
+          "_inherit": "msg-box1",
+          "_styles": {
+            ".mbr-header .mbr-header__text": {
+              "color": "#252525"
+            },
+            ".mbr-article": {
+              "color": "#252525"
+            }
+          },
+          "_params": {
+            "showTitle": true,
+            "showText": false,
+            "showButtons": false,
+            "paddingTop": 2,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "1.How can I make a site search on google from a Github site?",
+          "text": "",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">TRY FOR FREE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box2",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--short-paddings\" data-rv-view=\"161\" style=\"background-color: rgb(255, 255, 255);\">\n\n    \n\n    <div class=\"mbr-section__container mbr-section__container--isolated container\" style=\"padding-top: 10px; padding-bottom: 10px;\">\n        <div class=\"row\">\n            <div class=\"mbr-box mbr-box--fixed mbr-box--adapted\">\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__left col-sm-12\n                            \">\n                    <div class=\"mbr-section__container\">\n                        <div class=\"mbr-header mbr-header--auto-align mbr-header--wysiwyg\">\n                            <h3 class=\"mbr-header__text mbr-editable-content\" style=\"font-family: Roboto, sans-serif; font-size: 17px; text-align: left; color: rgb(71, 85, 119);\" code-editable-id=\"194\">1.How can I make a site search on google from a Github site?</h3>\n                        </div>\n                    </div>\n                    \n                </div>\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__right col-sm-4\">\n                    \n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_customCSS": "@import url(undefined);\n@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lora:400,700);\n@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n.mbr-header .mbr-header__text {\n  color: #252525;\n  font-size: 20px;\n}\n.mbr-article {\n  color: #252525;\n}\n",
+          "_customTemplate": true,
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_anchor": "msg-box2-2s"
+        },
+        {
+          "_inherit": "msg-box1",
+          "_styles": {
+            ".mbr-header .mbr-header__text": {
+              "color": "#252525"
+            },
+            ".mbr-article": {
+              "color": "#252525"
+            }
+          },
+          "_params": {
+            "showTitle": true,
+            "showText": false,
+            "showButtons": false,
+            "paddingTop": 2,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "1.How can I make a site search on google from a Github site?",
+          "text": "",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">TRY FOR FREE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box2",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--short-paddings\" data-rv-view=\"161\" style=\"background-color: rgb(255, 255, 255);\">\n\n    \n\n    <div class=\"mbr-section__container mbr-section__container--isolated container\" style=\"padding-top: 10px; padding-bottom: 10px;\">\n        <div class=\"row\">\n            <div class=\"mbr-box mbr-box--fixed mbr-box--adapted\">\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__left col-sm-12\">\n                    <div class=\"mbr-section__container\">\n                        <div class=\"mbr-header mbr-header--auto-align mbr-header--wysiwyg\">\n                            <h3 class=\"mbr-header__text mbr-editable-content\" style=\"font-family: Roboto, sans-serif; font-size: 17px; text-align: left; color: rgb(71, 85, 119);\" code-editable-id=\"201\">1.How can I make a site search on google from a Github site?</h3>\n                        </div>\n                    </div>\n                    \n                </div>\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__right col-sm-4\">\n                    \n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_customCSS": "@import url(undefined);\n@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lora:400,700);\n@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n.mbr-header .mbr-header__text {\n  color: #252525;\n  font-size: 20px;\n}\n.mbr-article {\n  color: #252525;\n}\n",
+          "_customTemplate": true,
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_anchor": "msg-box2-2t"
+        },
+        {
+          "_inherit": "msg-box1",
+          "_styles": {
+            ".mbr-header .mbr-header__text": {
+              "color": "#252525"
+            },
+            ".mbr-article": {
+              "color": "#252525"
+            }
+          },
+          "_params": {
+            "showTitle": true,
+            "showText": false,
+            "showButtons": false,
+            "paddingTop": 2,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "1.How can I make a site search on google from a Github site?",
+          "text": "",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">TRY FOR FREE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box2",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--short-paddings\" data-rv-view=\"161\" style=\"background-color: rgb(255, 255, 255);\">\n\n    \n\n    <div class=\"mbr-section__container mbr-section__container--isolated container\" style=\"padding-top: 10px; padding-bottom: 10px;\">\n        <div class=\"row\">\n            <div class=\"mbr-box mbr-box--fixed mbr-box--adapted\">\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__left col-sm-12\">\n                    <div class=\"mbr-section__container\">\n                        <div class=\"mbr-header mbr-header--auto-align mbr-header--wysiwyg\">\n                            <h3 class=\"mbr-header__text mbr-editable-content\" style=\"font-family: Roboto, sans-serif; font-size: 17px; text-align: left; color: rgb(71, 85, 119);\" code-editable-id=\"192\">1.How can I make a site search on google from a Github site?<br><br><br><br><br><br><br><br><br><br><br><br><br><br></h3>\n                        </div>\n                    </div>\n                    \n                </div>\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__right col-sm-4\">\n                    \n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_customCSS": "@import url(undefined);\n@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lora:400,700);\n@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n.mbr-header .mbr-header__text {\n  color: #252525;\n  font-size: 20px;\n}\n.mbr-article {\n  color: #252525;\n}\n",
+          "_customTemplate": true,
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_anchor": "msg-box2-2u"
+        },
+        {
+          "_params": {
+            "paddingTop": "2",
+            "paddingBottom": "2",
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#475577",
+            "overlay": true,
+            "overlayColor": "#444444",
+            "overlayOpacity": 0.8
+          },
+          "text": "Copyright (c) 2018 ClintGetIT.com",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "footer1",
+          "_anchor": "footer1-2v"
+        }
+      ]
+    },
+    "iod_detail_001.html": {
+      "settings": {
+        "title": "iod_detail_001",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 4
+      },
+      "components": [
+        {
+          "_styles": {
+            ".hide-buttons [data-button]": {
+              "display": "none !important"
+            },
+            ".navbar-brand a": {},
+            ".nav .link, .dropdown-item": {
+              "font-size": "1.2em",
+              "color": "#ffffff"
+            },
+            ".navbar, .dropdown-menu": {
+              "background": "#475577"
+            },
+            ".dropdown-menu .dropdown-toggle[aria-expanded=\"true\"], .dropdown-menu a:hover, .dropdown-menu a:focus": {
+              "background": "#3f4c6a"
+            },
+            ".navbar-toggler": {
+              "color": "#ffffff"
+            }
+          },
+          "_params": {
+            "logo": true,
+            "showBrand": true,
+            "hideButtons": true,
+            "sticky": true,
+            "transparent": true,
+            "bgColor": "#475577",
+            "fontSize": "1.2",
+            "fontName": {},
+            "fontColor": "#ffffff"
+          },
+          "items": "<li class=\"nav-item\"><a data-app-btn=\"true\" class=\"nav-link link\" href=\"https://mobirise.com/\">HOME</a></li><li class=\"nav-item dropdown open\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"true\">IT</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"ios.html\">ios</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"tel:+1-6157889964\">SAP</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"tel:+1-6157889964\">TEST<br></a><div class=\"dropdown\"><a data-app-btn=\"true\" class=\"dropdown-item dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">Trendy IT</a><div class=\"dropdown-menu dropdown-submenu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact forms</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image gallery</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Mobile menu</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google maps</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Social buttons</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google fonts</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Video background</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image/content slider</a></div></div></div></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">ABOUT</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"http://forums.mobirise.com/\">Forum</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Tutorials</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact us</a></div></li><li class=\"nav-item nav-btn\"><a data-app-btn=\"true\" data-button=\"\" data-app-selector=\".btn\" class=\"nav-link btn btn-default btn-default-outline\" href=\"https://mobirise.com/\">DOWNLOAD</a></li>",
+          "logo": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
+              "class": "",
+              "height": 128,
+              "alt": "ClintGetIT.com",
+              "link": "https://clintgetit.github.io/",
+              "title": "ClintGetIT.com",
+              "linkInNewWindow": false
+            }
+          },
+          "brand": "<a class=\"text-white\" data-app-selector=\".navbar-brand a\" data-app-btn=\"true\" href=\"https://clintgetit.github.io/ \" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">ClintGetIT.com<br><br></a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "dropdown-menu",
+          "_anchor": "dropdown-menu-2w"
+        },
+        {
+          "_inherit": "msg-box1",
+          "_params": {
+            "showTitle": true,
+            "showText": false,
+            "showButtons": false,
+            "paddingTop": 2,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "1.How can I make a site search on google from a Github site?",
+          "text": "",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">TRY FOR FREE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box2",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--short-paddings\" data-rv-view=\"161\" style=\"background-color: rgb(255, 255, 255);\">\n\n    \n\n    <div class=\"mbr-section__container mbr-section__container--isolated container\" style=\"padding-top: 10px; padding-bottom: 10px;\">\n        <div class=\"row\">\n            <div class=\"mbr-box mbr-box--fixed mbr-box--adapted\">\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__left col-sm-12\">\n                    <div class=\"mbr-section__container\">\n                        <div class=\"mbr-header mbr-header--auto-align mbr-header--wysiwyg\">\n                            <h3 class=\"mbr-header__text mbr-editable-content\" style=\"font-family: Roboto, sans-serif; font-size: 17px; text-align: left; color: rgb(71, 85, 119);\" code-editable-id=\"198\">1.How can I make a site search on google from a Github site?</h3>\n                        </div>\n                    </div>\n                    \n                </div>\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__right col-sm-4\">\n                    \n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_customCSS": "@import url(undefined);\n@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lora:400,700);\n@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n.mbr-header .mbr-header__text {\n  color: #252525;\n  font-size: 20px;\n}\n.mbr-article {\n  color: #252525;\n}\n",
+          "_customTemplate": true,
+          "_anchor": "msg-box2-2y"
+        },
+        {
+          "_styles": {
+            ".mbr-header .mbr-header__text": {
+              "text-align": "center"
+            },
+            ".mbr-header .mbr-header__subtext": {
+              "text-align": "center"
+            },
+            ".mbr-article P": {
+              "color": "#475577"
+            }
+          },
+          "_params": {
+            "showTitle": false,
+            "showMeta": false,
+            "showCaption": "noCaption",
+            "showText": true,
+            "showButton": false,
+            "paddingTop": "1",
+            "paddingBottom": "4",
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "",
+              "rawUrl": "",
+              "width": 1280,
+              "height": 720
+            },
+            "darkBackground": false,
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "MODERN STYLES",
+          "meta": "By John Smith posted July 30, 2015",
+          "text": "<p>Mobirise has provided for website developers a growing library of modern blocks which can be used either partially or in full for every website developed through the builder.</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">SEE ALL TEMPLATES</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box3",
+          "_anchor": "msg-box3-34"
+        },
+        {
+          "_params": {
+            "paddingTop": "2",
+            "paddingBottom": "2",
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#475577",
+            "overlay": true,
+            "overlayColor": "#444444",
+            "overlayOpacity": 0.8
+          },
+          "text": "Copyright (c) 2018 ClintGetIT.com",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "footer1",
+          "_anchor": "footer1-33"
         }
       ]
     }
