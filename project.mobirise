@@ -73,13 +73,12 @@
           "logo": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1920.jpg",
               "class": "",
               "height": 128,
               "alt": "ClintGetIT.com",
               "link": "https://clintgetit.github.io/",
-              "title": "ClintGetIT.com",
-              "linkInNewWindow": false
+              "title": "ClintGetIT.com"
             }
           },
           "brand": "<a class=\"text-white\" data-app-selector=\".navbar-brand a\" data-app-btn=\"true\" href=\"https://clintgetit.github.io/ \" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">ClintGetIT.com<br><br></a>",
@@ -119,7 +118,7 @@
           "_afterNavbarItem": ".mbr-section > .mbr-box__magnet",
           "_name": "header2",
           "_anchor": "header2-7",
-          "_customHTML": "<section class=\"mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted\" data-rv-view=\"13\" style=\"background-color: rgb(40, 50, 78);\">\n    <div class=\"mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar\">\n        \n        <div class=\"mbr-box__container mbr-section__container container\">\n            <div class=\"mbr-box mbr-box--stretched\"><div class=\"mbr-box__magnet mbr-box__magnet--center-left\">\n                <div class=\"row\"><div class=\" col-sm-6 col-sm-offset-6\">\n                    <div class=\"mbr-hero animated fadeInUp\">\n                        <h1 class=\"mbr-hero__text mbr-editable-content\" code-editable-id=\"49\">ClintGetIT.com</h1>\n                        <p class=\"mbr-hero__subtext mbr-editable-content\" code-editable-id=\"50\">Clint's space for Information Techonology </p>\n                    </div>\n                    <div class=\"mbr-buttons btn-inverse mbr-buttons--left\"><a class=\"mbr-buttons__btn btn btn-lg btn-warning animated fadeInUp delay mbr-editable-button\" href=\"https://clintgetit.github.io/\" code-editable-id=\"51\">LEARN MORE</a></div>\n                </div></div>\n            </div></div>\n        </div>\n        \n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted\" data-rv-view=\"13\" style=\"background-color: rgb(40, 50, 78);\">\n    <div class=\"mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar\">\n        \n        <div class=\"mbr-box__container mbr-section__container container\">\n            <div class=\"mbr-box mbr-box--stretched\"><div class=\"mbr-box__magnet mbr-box__magnet--center-left\">\n                <div class=\"row\"><div class=\" col-sm-6 col-sm-offset-6\">\n                    <div class=\"mbr-hero animated fadeInUp\">\n                        <h1 class=\"mbr-hero__text mbr-editable-content\" code-editable-id=\"236\">ClintGetIT.com</h1>\n                        <p class=\"mbr-hero__subtext mbr-editable-content\" code-editable-id=\"237\">Clint's space for Information Techonology </p>\n                    </div>\n                    <div class=\"mbr-buttons btn-inverse mbr-buttons--left\"><a class=\"mbr-buttons__btn btn btn-lg btn-warning animated fadeInUp delay mbr-editable-button\" href=\"https://clintgetit.github.io/\" code-editable-id=\"238\">LEARN MORE</a></div>\n                </div></div>\n            </div></div>\n        </div>\n        \n    </div>\n</section>",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_customCSS": "",
@@ -254,7 +253,7 @@
           "logo": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1920.jpg",
               "class": "",
               "height": 128,
               "alt": "ClintGetIT.com",
@@ -987,7 +986,7 @@
           "logo": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1920.jpg",
               "class": "",
               "height": 128,
               "alt": "ClintGetIT.com",
@@ -1171,7 +1170,7 @@
           "logo": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1920.jpg",
               "class": "",
               "height": 128,
               "alt": "ClintGetIT.com",
@@ -1297,7 +1296,7 @@
           "logo": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1920.jpg",
               "class": "",
               "height": 128,
               "alt": "ClintGetIT.com",
@@ -1552,7 +1551,7 @@
           "logo": {
             "image": {
               "active": true,
-              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg",
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1920.jpg",
               "class": "",
               "height": 128,
               "alt": "ClintGetIT.com",
