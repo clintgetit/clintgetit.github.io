@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.8.6",
     "siteFonts": [],
-    "uniqCompNum": 133,
+    "uniqCompNum": 137,
     "versionPublish": "4.8.6",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -527,7 +527,7 @@
       "settings": {
         "meta_descr": "TEST",
         "title": "test",
-        "order": 13
+        "order": 14
       },
       "components": [
         {
@@ -1670,7 +1670,7 @@
             "Theme"
           ],
           "_name": "msg-box3",
-          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"101\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div id=\"menu\" class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 1px; padding-bottom: 1px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -20px;\" code-editable-id=\"120\"><a href=\"github_001.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>Difference between SVN and GIT\nSVN vs GIT?</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n         <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -40px;\" code-editable-id=\"121\"><a href=\"github_001.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>How can I make a site search on google from a Github site?</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n        \n    </div>\n   <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 193px; padding-bottom: 1px;\">        \n    </div>\n\n</section>",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"101\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div id=\"menu\" class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 1px; padding-bottom: 1px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -20px;\" code-editable-id=\"149\"><a href=\"github_002.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>Difference between SVN and GIT\nSVN vs GIT?</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n         <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -40px;\" code-editable-id=\"150\"><a href=\"github_003.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>git command</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n        \n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -40px;\" code-editable-id=\"151\"><a href=\"github_001.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>How can I make a site search on google from a Github site?</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n        \n    </div>\n   <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 193px; padding-bottom: 1px;\">        \n    </div>\n\n</section>",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_customCSS": ".mbr-header .mbr-header__text {\n  text-align: center;\n}\n.mbr-header .mbr-header__subtext {\n  text-align: center;\n}\n.mbr-article .mbr-article__text {\n  text-align: left;\n}\n.mbr-article .mbr-article__subtext {\n  text-align: left;\n}\n#menu div:hover{                                       \n  background-color: #EFF5FB;\n}\n\n",
@@ -2340,6 +2340,174 @@
           ],
           "_name": "footer1",
           "_anchor": "footer1-3o"
+        }
+      ]
+    },
+    "github_003.html": {
+      "settings": {
+        "title": "github_003",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 13
+      },
+      "components": [
+        {
+          "_styles": {
+            ".hide-buttons [data-button]": {
+              "display": "none !important"
+            },
+            ".navbar-brand a": {},
+            ".nav .link, .dropdown-item": {
+              "font-size": "1.2em",
+              "color": "#ffffff"
+            },
+            ".navbar, .dropdown-menu": {
+              "background": "#475577"
+            },
+            ".dropdown-menu .dropdown-toggle[aria-expanded=\"true\"], .dropdown-menu a:hover, .dropdown-menu a:focus": {
+              "background": "#3f4c6a"
+            },
+            ".navbar-toggler": {
+              "color": "#ffffff"
+            }
+          },
+          "_params": {
+            "logo": true,
+            "showBrand": true,
+            "hideButtons": true,
+            "sticky": true,
+            "transparent": false,
+            "bgColor": "#475577",
+            "fontSize": "1.2",
+            "fontName": {},
+            "fontColor": "#ffffff"
+          },
+          "items": "<li class=\"nav-item\"><a data-app-btn=\"true\" class=\"nav-link link\" href=\"index.html\">Home</a></li><li class=\"nav-item dropdown open\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"true\">Developer</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"ios.html\">Ios</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"sap.html\">Sap</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"java.html\">Java</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"html.html\">Html</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"eclipse.html\">Eclipse<br></a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"github.html\">Github<br></a></div></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">Database</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"oracle.html\">Oracle</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Ms-sql</a></div></li><li class=\"nav-item nav-btn\"><a data-app-btn=\"true\" data-button=\"\" data-app-selector=\".btn\" class=\"nav-link btn btn-default btn-default-outline\" href=\"https://mobirise.com/\">DOWNLOAD</a></li>",
+          "logo": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1920.jpg",
+              "class": "",
+              "height": 128,
+              "alt": "ClintGetIT.com",
+              "link": "https://clintgetit.github.io/",
+              "title": "ClintGetIT.com",
+              "linkInNewWindow": false
+            }
+          },
+          "brand": "<a class=\"text-white\" data-app-selector=\".navbar-brand a\" data-app-btn=\"true\" href=\"https://clintgetit.github.io/ \" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">ClintGetIT.com<br><br></a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "dropdown-menu",
+          "_anchor": "dropdown-menu-3p"
+        },
+        {
+          "_inherit": "msg-box3",
+          "_styles": {
+            ".mbr-header .mbr-header__text": {
+              "text-align": "center",
+              "color": "#fff"
+            },
+            ".mbr-header .mbr-header__subtext": {
+              "text-align": "center",
+              "color": "#fff"
+            },
+            ".mbr-article": {
+              "color": "#fff"
+            }
+          },
+          "_params": {
+            "showTitle": true,
+            "showMeta": false,
+            "showCaption": "noCaption",
+            "showText": false,
+            "showButton": false,
+            "paddingTop": 3,
+            "paddingBottom": "2",
+            "bgImageRadio": true,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": false,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "darkBackground": true,
+            "overlay": true,
+            "overlayColor": "#28324e",
+            "overlayOpacity": 0.2
+          },
+          "title": "git command",
+          "text": "",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">LEARN MORE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "meta": "By John Smith posted July 30, 2015",
+          "_name": "content5",
+          "_anchor": "content5-3q"
+        },
+        {
+          "_params": {
+            "showTitle": true,
+            "showMeta": false,
+            "showCaption": "noCaption",
+            "showText": true,
+            "showButton": true,
+            "paddingTop": 3,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "darkBackground": false,
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "MODERN STYLES",
+          "meta": "By John Smith posted July 30, 2015",
+          "text": "<p>Mobirise has provided for website developers a growing library of modern blocks which can be used either partially or in full for every website developed through the builder.</p>",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">SEE ALL TEMPLATES</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box3",
+          "_customCSS": ".mbr-header .mbr-header__text {\n  text-align: center;\n}\n.mbr-header .mbr-header__subtext {\n  text-align: center;\n}\n",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"39\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 25px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2 mbr-editable-full\" code-editable-id=\"138\">\n    <p>\n      <strong>git command</strong>\n    </p>\n    <p>\n      Let's briefly summarize the commands used by git.\n    </p>\n\n    <p>\n      <strong>git--version</strong>\n    </p>\n    <p>\n      You can check the version of git at the moment.\n    </p>\n    <p>\n      <strong>gitinit</strong>\n    </p>\n    <p>\n      Create a git repository.\n    </p>\n    <p>\n      <strong>gitstatus</strong>\n    </p>\n    <p>\n      View uncommitted changes.\n    </p>\n    <p>\n      <strong>gitadd filename</strong>\n    </p>\n    <p>\n      git add puts the files you have worked on in the local\n      directory into the staging area. In other words, you can\n      declare it as a git-managed file.\n    </p>\n    <p>\n      <strong>git commit -m \"Commit message\"</strong>\n    </p>\n    <p>\n      Go to staging via git add and commit the files.\n    </p>\n    <p>\n      In SVN, commit refers to uploading changed files to the\n      server, while commit on git refers to only the changed files\n      (staged files) to the local repository.\n    </p>\n    <p>\n      In other words, the remote server is not up. To upload to a\n      remote server, you need to run git push again.\n    </p>\n    <p>\n      <strong>gitdiff</strong>\n    </p>\n    <p>\n      Shows the differences between the task tree and the staging\n      area.\n    </p>\n    <p>\n      Adding the --cached option shows the difference between the\n      staging area and the repository.\n    </p>\n    <p>\n      Type git diff HEAD to see all of the differences in the\n      working tree, staging area, and repository.\n    </p>\n    <p>\n      <strong>gitmv filename new\n      filename</strong>\n    </p>\n    <p>\n      Change existing file to new file and keep the change history.\n    </p>\n    <p>\n      <strong>gitcheckout - filename</strong>\n    </p>\n    <p>\n      Undo the changes to the previous commit file and revert to\n      the previous commit.\n    </p>\n    <p>\n      It plays the same role as SVN's revert.\n    </p>\n\n    <p>\n      <strong>gitbranch</strong>\n    </p>\n    <p>\n      You can see a list of branches in the local repository.\n    </p>\n    <p>\n      You can use the -r option to view the branches of the remote\n      repository.\n    </p>\n    <p>\n      <strong>gitbranch</strong>\n      <strong>branch1</strong>\n    </p>\n    <p>\n      Create a new branch called Branch 1 (do not check out).\n    </p>\n    <p>\n      <strong>gitbranch</strong>\n      <strong>branch2 branch 1</strong>\n    </p>\n    <p>\n      Create a new branch 2 in branch 1.\n    </p>\n    <p>\n      <strong>gitbranch -d branch 1</strong>\n    </p>\n    <p>\n      Delete branch 1.\n    </p>\n \n    <p>\n      <strong>gotag</strong>\n    </p>\n    <p>\n      You can see a list of tags in your local repository.\n    </p>\n    <p>\n      You can use the -r option to view the list of tags in the\n      remote repository.\n    </p>\n    <p>\n      <strong>gittag</strong>\n      <strong>tagname branch 1</strong>\n    </p>\n    <p>\n      Tags in the current state of branch 1 with the tag name.\n    </p>\n    <p>\n      Regular tags are often used as version names.\n    </p>\n\n    <p>\n      <strong>gitclone remote store\n      address</strong>\n    </p>\n    <p>\n      Duplicates the contents of the remote storage address and\n      stores it in the current folder.\n    </p>\n    <p>\n      <strong>gitpull</strong>\n    </p>\n    <p>\n      It takes changes from the remote repository and merges them\n      with the contents of the local repository.\n    </p>\n    <p>\n      <strong>gitpush</strong>\n    </p>\n    <p>\n      Uploads content from local storage to remote storage.\n    </p>\n    <p>\n      <strong>gitremote add name store\n      address</strong>\n    </p>\n    <p>\n      Add a new remote repository.\n    </p>\n    <p>\n      <strong>gitremote</strong>\n    </p>\n    <p>\n      Displays the list of remote storage added.\n    </p>\n    <p>\n      <strong>gitremote</strong>\n      <strong>rmname</strong>\n    </p>\n    <p>\n      Remove the remote repository with that name.\n    </p>\n\n    <p>\n      <strong>gitcheckout Branch name / tag\n      name</strong>\n    </p>\n    <p>\n      Change the working tree.\n    </p>\n    <p>\n      <strong>gitcheckout -b branch 2 branch\n      1</strong>\n    </p>\n    <p>\n      In branch 1, create a new branch called branch 2 and change\n      the working tree.\n    </p>\n    <p>\n      <strong>gitrebase branch 1</strong>\n    </p>\n    <p>\n      Apply changes from branch 1 to the current branch.\n    </p>\n    <p>\n      <strong>gitmerge branch\n      1</strong>\n    </p>\n    <p>\n      The branch of branch 1 is merged with the current branch.\n    </p>\n\n                \n                \n            </div>\n        </div><br><br><br><br><br>\n\t\t\n    </div>\n    <div class=\"mbr-section__container container mbr-section__container--last\" style=\"padding-bottom: 93px;\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 col-sm-offset-2\">\n                <div class=\"mbr-buttons mbr-buttons--center\"><a class=\"mbr-buttons__btn btn btn-lg btn-default mbr-editable-button\" href=\"github.html\" code-editable-id=\"139\">More Information</a></div>\n            </div>\n        </div>\n    </div>\n    \n\n</section>\n\n\n \n",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_customTemplate": true,
+          "_anchor": "msg-box3-3r"
+        },
+        {
+          "_params": {
+            "paddingTop": "2",
+            "paddingBottom": "2",
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#475577",
+            "overlay": true,
+            "overlayColor": "#444444",
+            "overlayOpacity": 0.8
+          },
+          "text": "Copyright (c) 2018 ClintGetIT.com",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "footer1",
+          "_anchor": "footer1-3s"
         }
       ]
     }
