@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/mbr-1920x1920.jpg" type="image/x-icon">
   <meta name="description" content="">
-  <title>ios_001</title>
+  <title>iOS_001</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&subset=cyrillic,latin,greek,vietnamese">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/soundcloud-plugin/style.css">
@@ -20,7 +20,7 @@
   
 </head>
 <body>
-  <section id="dropdown-menu-1x" data-rv-view="28">
+  <section id="dropdown-menu-3t" data-rv-view="119">
 
     <nav class="navbar navbar-dropdown navbar-fixed-top">
 
@@ -43,18 +43,240 @@
 
 </section>
 
-<section class="engine"><a href="https://mobirise.info">Mobirise</a></section><section class="mbr-section mbr-section--relative mbr-section--fixed-size mbr-after-navbar" id="msg-box3-1y" data-rv-view="30" style="background-color: rgb(255, 255, 255);">
-    
-    
-    <div class="mbr-section__container container mbr-section__container--isolated" style="padding-top: 93px; padding-bottom: 124px;">
-        <div class="row">
-            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2"><p>Mobirise has provided for website developers a growing library of modern blocks which can be used either partially or in full for every website developed through the builder.</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p></div>
+<section class="engine"><a href="https://mobirise.info/l">free site templates</a></section><section class="mbr-section mbr-section--relative mbr-section--fixed-size mbr-parallax-background mbr-after-navbar" id="content5-3u" data-rv-view="121" style="background-image: url(assets/images/bg3.jpg);">
+    <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(40, 50, 78);"></div>
+    <div class="mbr-section__container container mbr-section__container--isolated" style="padding-top: 93px; padding-bottom: 62px;">
+        <div class="mbr-header mbr-header--wysiwyg row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="mbr-header__text">How can I get simple HTML, JSON?</h3>
+                
+            </div>
         </div>
     </div>
     
+    
 </section>
 
-<footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-1z" data-rv-view="33" style="background-color: rgb(71, 85, 119);">
+<div id="msg-box3-3v" custom-code="true" data-rv-view="124"><section class="mbr-section mbr-section--relative mbr-section--fixed-size" data-rv-view="39" style="background-color: rgb(255, 255, 255);">
+    
+
+    <div class="mbr-section__container container mbr-section__container--middle" style="padding-top: 25px;">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2 mbr-editable-full"><p>
+			
+
+    </p><p>
+      It is important to handle communication with the server
+      because almost all apps store, retrieve, edit, and delete
+      data on external servers. The following terms are frequently
+      used to communicate with a web server. Below are three
+      definitions for url, session, and task when communicating
+      with a server in Swift. That is, you need to define the
+      address (url) of the web site from which the data will be
+      fetched, the session to the website, and the task to perform
+      certain tasks. The following example shows how to import HTML
+      and JSON data.
+    </p>
+    <p>
+      <strong>Get data fromHTML</strong>
+    </p>
+    <p>
+      We will access the external server and import the
+      HTML. As described above, you need to define url,
+      session, and task to import data from
+    </p><br><br>
+    <p>
+      import Foundation
+    </p>
+    <p>
+      import PlaygroundSupport
+    </p>
+    <p>
+      // JSON Get for Playground
+    </p>
+    <p>
+      PlaygroundPage.current.needsIndefiniteExecution = true
+    </p>
+    <p>
+      // URL
+    </p>
+    <p>
+      let urlPath = "https://www.youtube.com/"
+    </p>
+    <p>
+      let url = NSURL(string: urlPath)
+    </p>
+    <p>
+      // Session
+    </p>
+    <p>
+      let session = URLSession.shared
+    </p>
+    <p>
+      // Task
+    </p>
+    <p>
+      let task = session.dataTask(with: url! as URL,
+      completionHandler: {
+    </p>
+    <p>
+      (data, response, error) -&gt; Void in
+    </p>
+    <p>
+      if error == nil {
+    </p>
+    <p>
+      let urlContent = NSString(data: data!, encoding:
+      String.Encoding.utf8.rawValue)
+    </p>
+    <p>
+      print(urlContent ?? "No contents found")
+    </p>
+    <p>
+      } else {
+    </p>
+    <p>
+      print("Error occurred")
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      })
+    </p>
+    <p>
+      // Task Resume
+    </p>
+    <p>
+      task.resume()
+    </p><br><br>
+    <p>
+      First, url is the address of the site. You must also enter
+      https: // as above. Note that you need to do extra work on
+      info.plist to open the url that just starts with http. We
+      want Swift to recognize the url we see, but Swift will
+      usually recognize it as a String. Therefore, we need to
+      convert this url to NSURL as below.
+    </p>
+    <p>
+      Next you need to define a session. session is a connection.
+      To get data from a website, you first need to access it. Open
+      the session through URLSession.shared.Now let's take a look
+      at the task. The task requires both the url and session
+      defined above. First, call the session's dataTask method.
+      This allows you to define which url you want to get as an
+      argument value. Then, when the session is connected, have the
+      completionHandler enter what task to perform. The
+      completionHandler closure defines three data, response, and
+      error values ​​that are returned when the session is opened.
+      These values ​​are the values ​​that closure uses as
+      arguments. In particular, data refers to the HTML code in
+      this example, which is the data received when a session is
+      successfully opened.
+    </p>
+    <p>
+      If there is no error while opening the session, convert the
+      data to NSString first and print it. Do not forget
+      task.resume () at the end.
+    </p>
+    <p><br><br>
+      <strong>Get data fromJSON</strong>
+    </p>
+    <p>
+      This time, I will import JSON data from a web page that
+      launches JSON. JSON uses a Chrome extension or JSON Formatter
+      website because it is difficult to understand the structure
+      when opened in a web browser. Now I will import JSON into
+      Swift and print it out.
+    </p><br><br>
+    <p>
+      import Foundation
+    </p>
+    <p>
+      import PlaygroundSupport
+    </p>
+    <p>
+      // JSON Get for Playground
+    </p>
+    <p>
+      PlaygroundPage.current.needsIndefiniteExecution = true
+    </p>
+    <p>
+      let urlPath = "https://swapi.co/api/people/1/"
+    </p>
+    <p>
+      let url = NSURL(string: urlPath)
+    </p>
+    <p>
+      let session = URLSession.shared
+    </p>
+    <p>
+      let task = session.dataTask(with: url! as URL,
+      completionHandler: {
+    </p>
+    <p>
+      (data, response, error) -&gt; Void in
+    </p>
+    <p>
+      do {
+    </p>
+    <p>
+      let jsonResult =
+    </p>
+    <p>
+      try JSONSerialization.jsonObject(with: data!,
+    </p>
+    <p>
+      options: JSONSerialization.ReadingOptions.mutableContainers)
+    </p>
+    <p>
+      print(jsonResult)
+    </p>
+    <p>
+      } catch {
+    </p>
+    <p>
+      print("Error")
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      })
+    </p>
+    <p>
+      task.resume()
+    </p><br><br>
+    <p>
+      Because this is JSON, not HTML, we converted JSON to an
+      object that Swift can read through JSONSerialization. The
+      method used at this time throws an error and should be
+      handled through do-try-catch.
+    </p>
+  
+            
+            
+            
+            </div>
+        </div><br><br><br><br><br>
+		
+    </div>
+    <div class="mbr-section__container container mbr-section__container--last" style="padding-bottom: 93px;">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="mbr-buttons mbr-buttons--center"><a class="mbr-buttons__btn btn btn-lg btn-default mbr-editable-button" href="github.html">More Information</a></div>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+
+
+ 
+</div>
+
+<footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-3w" data-rv-view="125" style="background-color: rgb(71, 85, 119);">
     
     <div class="mbr-section__container container">
         <div class="mbr-footer mbr-footer--wysiwyg row" style="padding-top: 24.6px; padding-bottom: 24.6px;">
@@ -69,6 +291,7 @@
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/jarallax/jarallax.js"></script>
   <script src="assets/mobirise/js/script.js"></script>
   <script src="assets/dropdown-menu/script.js"></script>
   
