@@ -594,3 +594,40 @@
 #msg-box3-3k .mbr-header .mbr-header__subtext {
   text-align: center;
 }
+#dropdown-menu-3l .hide-buttons [data-button] {
+  display: none !important;
+}
+#dropdown-menu-3l .nav .link,
+#dropdown-menu-3l .dropdown-item {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+#dropdown-menu-3l .navbar,
+#dropdown-menu-3l .dropdown-menu {
+  background: #475577;
+}
+#dropdown-menu-3l .dropdown-menu .dropdown-toggle[aria-expanded="true"],
+#dropdown-menu-3l .dropdown-menu a:hover,
+#dropdown-menu-3l .dropdown-menu a:focus {
+  background: #3f4c6a;
+}
+#dropdown-menu-3l .navbar-toggler {
+  color: #ffffff;
+}
+#content5-3m .mbr-header .mbr-header__text {
+  text-align: center;
+  color: #fff;
+}
+#content5-3m .mbr-header .mbr-header__subtext {
+  text-align: center;
+  color: #fff;
+}
+#content5-3m .mbr-article {
+  color: #fff;
+}
+#msg-box3-3n .mbr-header .mbr-header__text {
+  text-align: center;
+}
+#msg-box3-3n .mbr-header .mbr-header__subtext {
+  text-align: center;
+}

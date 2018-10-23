@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "ClintGetIT.com",
-    "currentPage": "github_001.html",
+    "currentPage": "github.html",
     "theme": {
       "name": "default",
       "title": "Mobirise",
@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.8.6",
     "siteFonts": [],
-    "uniqCompNum": 129,
+    "uniqCompNum": 133,
     "versionPublish": "4.8.6",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -527,7 +527,7 @@
       "settings": {
         "meta_descr": "TEST",
         "title": "test",
-        "order": 12
+        "order": 13
       },
       "components": [
         {
@@ -1670,7 +1670,7 @@
             "Theme"
           ],
           "_name": "msg-box3",
-          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"101\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div id=\"menu\" class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 1px; padding-bottom: 1px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -20px;\" code-editable-id=\"56\"><a href=\"github_001.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>2.How can I make a site search on google from a Github site?</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n         <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -40px;\" code-editable-id=\"57\"><a href=\"github_001.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>1.How can I make a site search on google from a Github site?</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n        \n    </div>\n   <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 193px; padding-bottom: 1px;\">        \n    </div>\n\n</section>",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"101\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div id=\"menu\" class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 1px; padding-bottom: 1px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -20px;\" code-editable-id=\"116\"><a href=\"github_001.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>Difference between SVN and GIT\nSVN vs GIT?</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n         <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -40px;\" code-editable-id=\"117\"><a href=\"github_001.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>How can I make a site search on google from a Github site?</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n        \n    </div>\n   <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 193px; padding-bottom: 1px;\">        \n    </div>\n\n</section>",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_customCSS": ".mbr-header .mbr-header__text {\n  text-align: center;\n}\n.mbr-header .mbr-header__subtext {\n  text-align: center;\n}\n.mbr-article .mbr-article__text {\n  text-align: left;\n}\n.mbr-article .mbr-article__subtext {\n  text-align: left;\n}\n#menu div:hover{                                       \n  background-color: #EFF5FB;\n}\n\n",
@@ -2148,7 +2148,7 @@
           "_name": "msg-box3",
           "_anchor": "msg-box3-3k",
           "_customCSS": ".mbr-header .mbr-header__text {\n  text-align: center;\n}\n.mbr-header .mbr-header__subtext {\n  text-align: center;\n}\n",
-          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"39\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 25px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2 mbr-editable-full\" code-editable-id=\"60\"><p>\n\t\t\tGitHub is famous for its free web hosting site.\nIt is important to be exposed to the search site to those who run a personal blog or open a business site.\nHow much exposure is related to profit.\nIf you use the blog service of the portal, you can search it automatically. However, if you use a platform such as github, you have to register to search for each portal directly\nSo, let's look at how to search on google site through Github.<br><br>\n</p><p>1.Sitemap creation</p>\nCreate a /sitemap.xml file in the root directory of your blog and copy the contents below. You need to put it in the root directory.\nIf you can not create a sitemap, there are a lot of sites that search on Google and make sitemap.xml free.\nAfter updating your blog with git and commit, when you log in with ( blog address/sitemap.xml ), and then you can see the screen to register your sitemap like below.\n<br>\n<img src=\"assets/images/github1001.jpg\" border=\"0\" style=\"width: 660px; height: auto;\" align=\"center\"> \n<br><br><br>\nInformation such as lastmod, sitemap.changefreq, sitemap.prioritye of each corresponding article is set in sitemap.xml. It can be additionally set by adding sitemap option at the top of each article as follows. The default setting when there is no setting is defined in\n<br>\n<div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n<p>layout: post</p>\n<p>title: </p>\n<p>date:   2018-10-22 10:46:00 </p>\n<p>lastmod : 2018-10-22 12:00:00</p>\n<p>sitemap :</p>\n<p>changefreq : daily</p>\n<p>priority : 1.0</p>\n</div>\n<br>\n2. Create robots.txt<br>\nBy registering the location of the sitemap.xml file in your robots.txt file, search engine crawlers will help you crawl your homepage. Create a /robots.txt file in the root directory and type.\n<div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n<p>User-agent: *</p>\n<p>Allow: /</p>\n<p></p>\n<p>Sitemap: http://clintgetit.github.io/sitemap.xml</p>\n</div>\n<br><br><br>\n3. Submit sitemap.xml to Google Webmaster Tools (Search Console)<br>\n   Access Google Webmaster Tools.<br>\n      Left Menu - Crawl - Select Sitemaps<br>\n   In the top right - Select Add / Test SITEMAP.<br>\n   Enter sitemap.xml in the blank space and test.<br>\n   If there is no test problem, submit it.<br><br>\n\n\n\t\t\tAdd the sitemap file to github as below and select submit site map of Google and get approval.\nThen search on Google will be search.</div>\n        </div><br><br><br><br><br>\n\t\t<img src=\"assets/images/github1002.jpg\" border=\"0\" style=\"width: 300px; height: auto;\" align=\"center\">  \n\t\t<img src=\"assets/images/github1003.jpg\" border=\"0\" style=\"max-width: 820px; height: auto;\" align=\"center\">  \n\t\t<img src=\"assets/images/github1004.jpg\" border=\"0\" style=\"max-width: 900px; height: auto;\" align=\"center\"> \n    </div>\n    <div class=\"mbr-section__container container mbr-section__container--last\" style=\"padding-bottom: 93px;\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 col-sm-offset-2\">\n                <div class=\"mbr-buttons mbr-buttons--center\"><a class=\"mbr-buttons__btn btn btn-lg btn-default mbr-editable-button\" href=\"github.html\" code-editable-id=\"61\">More Information</a></div>\n            </div>\n        </div>\n    </div>\n    \n\n</section>\n\n\n \n",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"39\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 25px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2 mbr-editable-full\" code-editable-id=\"62\"><p>\n\t\t\tGitHub is famous for its free web hosting site.\nIt is important to be exposed to the search site to those who run a personal blog or open a business site.\nHow much exposure is related to profit.\nIf you use the blog service of the portal, you can search it automatically. However, if you use a platform such as github, you have to register to search for each portal directly\nSo, let's look at how to search on google site through Github.<br><br>\n</p><p>1.Sitemap creation</p>\nCreate a /sitemap.xml file in the root directory of your blog and copy the contents below. You need to put it in the root directory.\nIf you can not create a sitemap, there are a lot of sites that search on Google and make sitemap.xml free.\nAfter updating your blog with git and commit, when you log in with ( blog address/sitemap.xml ), and then you can see the screen to register your sitemap like below.\n<br>\n<img src=\"assets/images/github1001.jpg\" border=\"0\" style=\"width: 660px; height: auto;\" align=\"center\"> \n<br><br><br>\nInformation such as lastmod, sitemap.changefreq, sitemap.prioritye of each corresponding article is set in sitemap.xml. It can be additionally set by adding sitemap option at the top of each article as follows. The default setting when there is no setting is defined in\n<br>\n<div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n<p>layout: post</p>\n<p>title: </p>\n<p>date:   2018-10-22 10:46:00 </p>\n<p>lastmod : 2018-10-22 12:00:00</p>\n<p>sitemap :</p>\n<p>changefreq : daily</p>\n<p>priority : 1.0</p>\n</div>\n<br>\n2. Create robots.txt<br>\nBy registering the location of the sitemap.xml file in your robots.txt file, search engine crawlers will help you crawl your homepage. Create a /robots.txt file in the root directory and type.\n<div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n<p>User-agent: *</p>\n<p>Allow: /</p>\n<p></p>\n<p>Sitemap: http://clintgetit.github.io/sitemap.xml</p>\n</div>\n<br><br><br>\n3. Submit sitemap.xml to Google Webmaster Tools (Search Console)<br>\n   Access Google Webmaster Tools.<br>\n      Left Menu - Crawl - Select Sitemaps<br>\n   In the top right - Select Add / Test SITEMAP.<br>\n   Enter sitemap.xml in the blank space and test.<br>\n   If there is no test problem, submit it.<br><br>\n\n\n\t\t\tAdd the sitemap file to github as below and select submit site map of Google and get approval.\nThen search on Google will be search.</div>\n        </div><br><br><br><br><br>\n\t\t<img src=\"assets/images/github1002.jpg\" border=\"0\" style=\"width: 300px; height: auto;\" align=\"center\">  \n\t\t<img src=\"assets/images/github1003.jpg\" border=\"0\" style=\"max-width: 820px; height: auto;\" align=\"center\">  \n\t\t<img src=\"assets/images/github1004.jpg\" border=\"0\" style=\"max-width: 900px; height: auto;\" align=\"center\"> \n    </div>\n    <div class=\"mbr-section__container container mbr-section__container--last\" style=\"padding-bottom: 93px;\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 col-sm-offset-2\">\n                <div class=\"mbr-buttons mbr-buttons--center\"><a class=\"mbr-buttons__btn btn btn-lg btn-default mbr-editable-button\" href=\"github.html\" code-editable-id=\"63\">More Information</a></div>\n            </div>\n        </div>\n    </div>\n    \n\n</section>\n\n\n \n",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_customTemplate": true
@@ -2172,6 +2172,174 @@
           ],
           "_name": "footer1",
           "_anchor": "footer1-3e"
+        }
+      ]
+    },
+    "github_002.html": {
+      "settings": {
+        "title": "github_002",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 12
+      },
+      "components": [
+        {
+          "_styles": {
+            ".hide-buttons [data-button]": {
+              "display": "none !important"
+            },
+            ".navbar-brand a": {},
+            ".nav .link, .dropdown-item": {
+              "font-size": "1.2em",
+              "color": "#ffffff"
+            },
+            ".navbar, .dropdown-menu": {
+              "background": "#475577"
+            },
+            ".dropdown-menu .dropdown-toggle[aria-expanded=\"true\"], .dropdown-menu a:hover, .dropdown-menu a:focus": {
+              "background": "#3f4c6a"
+            },
+            ".navbar-toggler": {
+              "color": "#ffffff"
+            }
+          },
+          "_params": {
+            "logo": true,
+            "showBrand": true,
+            "hideButtons": true,
+            "sticky": true,
+            "transparent": false,
+            "bgColor": "#475577",
+            "fontSize": "1.2",
+            "fontName": {},
+            "fontColor": "#ffffff"
+          },
+          "items": "<li class=\"nav-item\"><a data-app-btn=\"true\" class=\"nav-link link\" href=\"index.html\">Home</a></li><li class=\"nav-item dropdown open\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"true\">Developer</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"ios.html\">Ios</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"sap.html\">Sap</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"java.html\">Java</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"html.html\">Html</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"eclipse.html\">Eclipse<br></a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"github.html\">Github<br></a></div></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">Database</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"oracle.html\">Oracle</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Ms-sql</a></div></li><li class=\"nav-item nav-btn\"><a data-app-btn=\"true\" data-button=\"\" data-app-selector=\".btn\" class=\"nav-link btn btn-default btn-default-outline\" href=\"https://mobirise.com/\">DOWNLOAD</a></li>",
+          "logo": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1920.jpg",
+              "class": "",
+              "height": 128,
+              "alt": "ClintGetIT.com",
+              "link": "https://clintgetit.github.io/",
+              "title": "ClintGetIT.com",
+              "linkInNewWindow": false
+            }
+          },
+          "brand": "<a class=\"text-white\" data-app-selector=\".navbar-brand a\" data-app-btn=\"true\" href=\"https://clintgetit.github.io/ \" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">ClintGetIT.com<br><br></a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "dropdown-menu",
+          "_anchor": "dropdown-menu-3l"
+        },
+        {
+          "_inherit": "msg-box3",
+          "_styles": {
+            ".mbr-header .mbr-header__text": {
+              "text-align": "center",
+              "color": "#fff"
+            },
+            ".mbr-header .mbr-header__subtext": {
+              "text-align": "center",
+              "color": "#fff"
+            },
+            ".mbr-article": {
+              "color": "#fff"
+            }
+          },
+          "_params": {
+            "showTitle": true,
+            "showMeta": false,
+            "showCaption": "noCaption",
+            "showText": false,
+            "showButton": false,
+            "paddingTop": 3,
+            "paddingBottom": "2",
+            "bgImageRadio": true,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": false,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "darkBackground": true,
+            "overlay": true,
+            "overlayColor": "#28324e",
+            "overlayOpacity": 0.2
+          },
+          "title": "Difference between SVN and GIT<br>SVN vs GIT",
+          "text": "",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">LEARN MORE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "meta": "By John Smith posted July 30, 2015",
+          "_name": "content5",
+          "_anchor": "content5-3m"
+        },
+        {
+          "_params": {
+            "showTitle": true,
+            "showMeta": false,
+            "showCaption": "noCaption",
+            "showText": true,
+            "showButton": true,
+            "paddingTop": 3,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "darkBackground": false,
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "MODERN STYLES",
+          "meta": "By John Smith posted July 30, 2015",
+          "text": "<p>Mobirise has provided for website developers a growing library of modern blocks which can be used either partially or in full for every website developed through the builder.</p>",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">SEE ALL TEMPLATES</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box3",
+          "_customCSS": ".mbr-header .mbr-header__text {\n  text-align: center;\n}\n.mbr-header .mbr-header__subtext {\n  text-align: center;\n}\n",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"39\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 25px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2 mbr-editable-full\" code-editable-id=\"110\">\n     <p><br><br>\n      <strong>What is</strong>\n      <strong>git?</strong>\n    </p>\n    <p>\n      git is an indispensable version control system for\n      developers.\n    </p>\n    <p>\n      In the past, companies have used CVS, SVN, and a centralized\n      version control system to do many projects,I use git a lot\n      these days.\n    </p>\n    <p>\n      If SVN is a centralized version control system, then git is a\n      distributed version control system.\n    </p>\n    <p>\n      I will look at the overall concept of git and the differences\n      with SVN.\n    </p>\n    <p><br><br>\n      <strong>What is a version control system?</strong>\n    </p>\n    <p>\n      A version control system is a system that can record file\n      changes over time and then retrieve the version at a later\n      point in time. It is defined as.\n    </p>\n    <p>\n      A system that helps you continuously record and recover\n      changes to a file in a database called a repository\n      (repository).\n    </p>\n    <p>\n      It is said that version control can be done not only for\n      source code but also for graphic files.\n    </p>\n    <p><br><br>\n      <strong>Difference between centralized version control system\n      and distributed version control system</strong>\n    </p>\n    <p>\n      The representative of a centralized version control system\n      can be called SVN (Apache Subversion), and the distributed\n      version control system can be called git.\n    </p>\n    <p>\n      Centralized versioning is done by centralized version\n      control. So the full version of management can only be\n      verified on the server.\n    </p>\n    <p>\n      Distributed version control systems, on the other hand, mean\n      that full versioning is done on the server, but also on the\n      local store.\n    </p>\n    <p>\n      In a nutshell, a distributed version control system has the\n      entire contents of a centralized version control system in\n      its entirety in local repositories, and it has the same\n      server.So the commit command is uploaded to the server in\n      SVN, but in git it is the command to save it as local final.\n      (The command to put git on the server needs to run git push.)\n    </p>\n    <p>\n      Running git push will put the contents of the local\n      repository on the server as a whole.\n    </p>\n    <p><br><br>\n      <strong>The distributed version control system basically\n      thinks that version control is local.</strong>\n    </p>\n    <p>\n      Proceeding with version control locally and uploading to\n      remote repository only when the program is perfect and you\n      need to share it with team members or other collaborators.\n    </p>\n    <p><br><br>\n      <strong>Advantages of Distributed Version Control System\n      GIT</strong>\n    </p>\n    <p>\n      If remote storage is destroyed or for any reason, it can be\n      restored by simply copying the local storage again,\n    </p>\n    <p>\n      Version management is possible even when the Internet is not\n      available. It also works locally and is fast\n    </p>\n    <p><br><br>\n      <strong>git lient</strong>\n    </p>\n    <p>\n      There is a free git client that makes it easier to use git, a\n      distributed version control system.\n    </p>\n    <p><br><br>\n        <strong>Tortoisegit</strong>\n    </p>\n    <p>\n      Tortoise has been a favorite with SVN and has been producing\n      git clients for free.\n    </p>\n    <p>\n      Usage is similar to Tortoise SVN, so it is easy to integrate\n      with explorer.\n    </p>\n    <p>\n      The disadvantage is that only for windows.\n    </p>\n    <p><br><br>\n        <strong>SourceTree</strong>\n    </p>\n    <p>\n      SourceTree is a GUI based git client created by atlassian\n      famous for JIRA and Confluence.\n    </p>\n    <p>\n      It is somewhat stable, and since it has all of git's various\n      commands, it is the most stable git client available today.\n    </p>\n    <p>\n      SourceTree is available for Mac as well as Windows.\n    </p>\n    <p>\n      Git <strong>Server</strong>\n    </p>\n    <table border=\"1\">\n      <tbody><tr>\n        <td>\n          <p>\n            <strong>Service</strong>\n          </p>\n        </td>\n        <td>\n          <p>\n            <strong>Note</strong>\n          </p>\n        </td>\n        <td>\n          <p>\n            <strong>url</strong>\n          </p>\n        </td>\n      </tr>\n      <tr>\n        <td>\n          <p>\n            GITHUB\n          </p>\n        </td>\n        <td>\n          <p>\n            Free but source open\n          </p>\n        </td>\n        <td>\n          <p>\n            <a href=\"https://www.github.com/\"><span class=\"c1\">https://www.github.com</span></a>\n          </p>\n        </td>\n      </tr>\n      <tr>\n        <td>\n          <p>\n            GITLAB\n          </p>\n        </td>\n        <td>\n          <p>\n            Free, unlimited usage\n          </p>\n        </td>\n        <td>\n          <p>\n            <a href=\"https://about.gitlab.com/\"><span class=\"c1\">https://about.gitlab.com</span></a>\n          </p>\n        </td>\n      </tr>\n      <tr>\n        <td>\n          <p>\n            Bitbucket\n          </p>\n        </td>\n        <td>\n          <p>\n            Low price\n          </p>\n        </td>\n        <td>\n          <p>\n            <a href=\"https://bitbucket.org/\"><span class=\"c1\">https://bitbucket.org</span></a>\n          </p>\n        </td>\n      </tr>\n      <tr>\n        <td>\n          <p>\n            Bonobo Git Server\n          </p>\n        </td>\n        <td>\n          <p>\n            Win\n          </p>\n        </td>\n        <td>\n          <p>\n            <a href=\"https://bonobogitserver.com/\"><span class=\"c1\">https://bonobogitserver.com</span></a>\n          </p>\n        </td>\n      </tr>\n      <tr>\n        <td>\n          <p>\n            gogs\n          </p>\n        </td>\n        <td>\n          <p>\n            Linux/Win/Mac\n          </p>\n        </td>\n        <td>\n          <p>\n            <a href=\"https://gogs.io/\"><span class=\"c1\">https://gogs.io</span></a>\n          </p>\n        </td>\n      </tr>\n      <tr>\n        <td>\n          <p>\n            gitea\n          </p>\n        </td>\n        <td>\n          <p>\n            Linux/Win/Mac\n          </p>\n        </td>\n        <td>\n          <p>\n            <a href=\"https://gitea.io/en-US\"><span class=\"c1\">https://gitea.io/en-US</span></a>\n          </p>\n        </td>\n      </tr>\n    </tbody></table>\n  \n                \n                \n            </div>\n        </div><br><br><br><br><br>\n\t\t\n    </div>\n    <div class=\"mbr-section__container container mbr-section__container--last\" style=\"padding-bottom: 93px;\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 col-sm-offset-2\">\n                <div class=\"mbr-buttons mbr-buttons--center\"><a class=\"mbr-buttons__btn btn btn-lg btn-default mbr-editable-button\" href=\"github.html\" code-editable-id=\"111\">More Information</a></div>\n            </div>\n        </div>\n    </div>\n    \n\n</section>\n\n\n \n",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_customTemplate": true,
+          "_anchor": "msg-box3-3n"
+        },
+        {
+          "_params": {
+            "paddingTop": "2",
+            "paddingBottom": "2",
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#475577",
+            "overlay": true,
+            "overlayColor": "#444444",
+            "overlayOpacity": 0.8
+          },
+          "text": "Copyright (c) 2018 ClintGetIT.com",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "footer1",
+          "_anchor": "footer1-3o"
         }
       ]
     }
