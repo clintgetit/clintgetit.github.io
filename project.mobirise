@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "ClintGetIT.com",
-    "currentPage": "java.html",
+    "currentPage": "java002.html",
     "theme": {
       "name": "default",
       "title": "Mobirise",
@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.8.6",
     "siteFonts": [],
-    "uniqCompNum": 157,
+    "uniqCompNum": 161,
     "versionPublish": "4.8.6",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -397,7 +397,7 @@
       "settings": {
         "meta_descr": "TEST",
         "title": "test",
-        "order": 18
+        "order": 19
       },
       "components": [
         {
@@ -1884,7 +1884,7 @@
         "header_custom": "",
         "footer_custom": "",
         "html_before": "",
-        "order": 15
+        "order": 16
       },
       "components": [
         {
@@ -2018,7 +2018,7 @@
           "_name": "msg-box3",
           "_anchor": "msg-box3-3k",
           "_customCSS": ".mbr-header .mbr-header__text {\n  text-align: center;\n}\n.mbr-header .mbr-header__subtext {\n  text-align: center;\n}\n",
-          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"39\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 25px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2 mbr-editable-full\" code-editable-id=\"168\"><p>\n\t\t\tGitHub is famous for its free web hosting site.\nIt is important to be exposed to the search site to those who run a personal blog or open a business site.\nHow much exposure is related to profit.\nIf you use the blog service of the portal, you can search it automatically. However, if you use a platform such as github, you have to register to search for each portal directly\nSo, let's look at how to search on google site through Github.<br><br>\n</p><p>1.Sitemap creation</p>\nCreate a /sitemap.xml file in the root directory of your blog and copy the contents below. You need to put it in the root directory.\nIf you can not create a sitemap, there are a lot of sites that search on Google and make sitemap.xml free.\nAfter updating your blog with git and commit, when you log in with ( blog address/sitemap.xml ), and then you can see the screen to register your sitemap like below.\n<br>\n<img src=\"assets/images/github1001.JPG\" border=\"0\" style=\"width: 660px; height: auto;\" align=\"center\"> \n<br><br><br>\nInformation such as lastmod, sitemap.changefreq, sitemap.prioritye of each corresponding article is set in sitemap.xml. It can be additionally set by adding sitemap option at the top of each article as follows. The default setting when there is no setting is defined in\n<br>\n<div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n<p>layout: post</p>\n<p>title: </p>\n<p>date:   2018-10-22 10:46:00 </p>\n<p>lastmod : 2018-10-22 12:00:00</p>\n<p>sitemap :</p>\n<p>changefreq : daily</p>\n<p>priority : 1.0</p>\n</div>\n<br>\n2. Create robots.txt<br>\nBy registering the location of the sitemap.xml file in your robots.txt file, search engine crawlers will help you crawl your homepage. Create a /robots.txt file in the root directory and type.\n<div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n<p>User-agent: *</p>\n<p>Allow: /</p>\n<p></p>\n<p>Sitemap: http://clintgetit.github.io/sitemap.xml</p>\n</div>\n<br><br><br>\n3. Submit sitemap.xml to Google Webmaster Tools (Search Console)<br>\n   Access Google Webmaster Tools.<br>\n      Left Menu - Crawl - Select Sitemaps<br>\n   In the top right - Select Add / Test SITEMAP.<br>\n   Enter sitemap.xml in the blank space and test.<br>\n   If there is no test problem, submit it.<br><br>\n\n\n\t\t\tAdd the sitemap file to github as below and select submit site map of Google and get approval.\nThen search on Google will be search.</div>\n        </div><br><br><br><br><br>\n\t\t<img src=\"assets/images/github1002.jpg\" border=\"0\" style=\"width: 300px; height: auto;\" align=\"center\">  \n\t\t<img src=\"assets/images/github1003.jpg\" border=\"0\" style=\"max-width: 820px; height: auto;\" align=\"center\">  \n\t\t<img src=\"assets/images/github1004.jpg\" border=\"0\" style=\"max-width: 900px; height: auto;\" align=\"center\"> \n    </div>\n    <div class=\"mbr-section__container container mbr-section__container--last\" style=\"padding-bottom: 93px;\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 col-sm-offset-2\">\n                <div class=\"mbr-buttons mbr-buttons--center\"><a class=\"mbr-buttons__btn btn btn-lg btn-default mbr-editable-button\" href=\"github.html\" code-editable-id=\"169\">More Information</a></div>\n            </div>\n        </div>\n    </div>\n    \n\n</section>\n\n\n \n",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"39\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 25px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2 mbr-editable-full\" code-editable-id=\"227\"><p>\n\t\t\tGitHub is famous for its free web hosting site.\nIt is important to be exposed to the search site to those who run a personal blog or open a business site.\nHow much exposure is related to profit.\nIf you use the blog service of the portal, you can search it automatically. However, if you use a platform such as github, you have to register to search for each portal directly\nSo, let's look at how to search on google site through Github.<br><br>\n</p><p>1.Sitemap creation</p>\nCreate a /sitemap.xml file in the root directory of your blog and copy the contents below. You need to put it in the root directory.\nIf you can not create a sitemap, there are a lot of sites that search on Google and make sitemap.xml free.\nAfter updating your blog with git and commit, when you log in with ( blog address/sitemap.xml ), and then you can see the screen to register your sitemap like below.\n<br>\n<img src=\"assets/images/github1001.JPG\" border=\"0\" style=\"width: 660px; height: auto;\" align=\"center\"> \n<br><br><br>\nInformation such as lastmod, sitemap.changefreq, sitemap.prioritye of each corresponding article is set in sitemap.xml. It can be additionally set by adding sitemap option at the top of each article as follows. The default setting when there is no setting is defined in\n<br>\n<div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n<p>layout: post</p>\n<p>title: </p>\n<p>date:   2018-10-22 10:46:00 </p>\n<p>lastmod : 2018-10-22 12:00:00</p>\n<p>sitemap :</p>\n<p>changefreq : daily</p>\n<p>priority : 1.0</p>\n</div>\n<br>\n2. Create robots.txt<br>\nBy registering the location of the sitemap.xml file in your robots.txt file, search engine crawlers will help you crawl your homepage. Create a /robots.txt file in the root directory and type.\n<div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n<p>User-agent: *</p>\n<p>Allow: /</p>\n<p></p>\n<p>Sitemap: http://clintgetit.github.io/sitemap.xml</p>\n</div>\n<br><br><br>\n3. Submit sitemap.xml to Google Webmaster Tools (Search Console)<br>\n   Access Google Webmaster Tools.<br>\n      Left Menu - Crawl - Select Sitemaps<br>\n   In the top right - Select Add / Test SITEMAP.<br>\n   Enter sitemap.xml in the blank space and test.<br>\n   If there is no test problem, submit it.<br><br>\n\n\n\t\t\tAdd the sitemap file to github as below and select submit site map of Google and get approval.\nThen search on Google will be search.</div>\n        </div><br><br><br><br><br>\n\t\t<img src=\"assets/images/github1002.jpg\" border=\"0\" style=\"width: 300px; height: auto;\" align=\"center\">  \n\t\t<img src=\"assets/images/github1003.jpg\" border=\"0\" style=\"max-width: 820px; height: auto;\" align=\"center\">  \n\t\t<img src=\"assets/images/github1004.jpg\" border=\"0\" style=\"max-width: 900px; height: auto;\" align=\"center\"> \n    </div>\n    <div class=\"mbr-section__container container mbr-section__container--last\" style=\"padding-bottom: 93px;\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 col-sm-offset-2\">\n                <div class=\"mbr-buttons mbr-buttons--center\"><a class=\"mbr-buttons__btn btn btn-lg btn-default mbr-editable-button\" href=\"github.html\" code-editable-id=\"228\">More Information</a></div>\n            </div>\n        </div>\n    </div>\n    \n\n</section>\n\n\n \n",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_customTemplate": true
@@ -2052,7 +2052,7 @@
         "header_custom": "",
         "footer_custom": "",
         "html_before": "",
-        "order": 16
+        "order": 17
       },
       "components": [
         {
@@ -2220,7 +2220,7 @@
         "header_custom": "",
         "footer_custom": "",
         "html_before": "",
-        "order": 17
+        "order": 18
       },
       "components": [
         {
@@ -3218,6 +3218,174 @@
           ],
           "_name": "footer1",
           "_anchor": "footer1-4c"
+        }
+      ]
+    },
+    "java002.html": {
+      "settings": {
+        "title": "java_002",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 15
+      },
+      "components": [
+        {
+          "_styles": {
+            ".hide-buttons [data-button]": {
+              "display": "none !important"
+            },
+            ".navbar-brand a": {},
+            ".nav .link, .dropdown-item": {
+              "font-size": "1.2em",
+              "color": "#ffffff"
+            },
+            ".navbar, .dropdown-menu": {
+              "background": "#475577"
+            },
+            ".dropdown-menu .dropdown-toggle[aria-expanded=\"true\"], .dropdown-menu a:hover, .dropdown-menu a:focus": {
+              "background": "#3f4c6a"
+            },
+            ".navbar-toggler": {
+              "color": "#ffffff"
+            }
+          },
+          "_params": {
+            "logo": true,
+            "showBrand": true,
+            "hideButtons": true,
+            "sticky": true,
+            "transparent": false,
+            "bgColor": "#475577",
+            "fontSize": "1.2",
+            "fontName": {},
+            "fontColor": "#ffffff"
+          },
+          "items": "<li class=\"nav-item\"><a data-app-btn=\"true\" class=\"nav-link link\" href=\"index.html\">Home</a></li><li class=\"nav-item dropdown open\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"true\">Developer</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"ios.html\">Ios</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"sap.html\">Sap</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"java.html\">Java</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"html.html\">Html</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"eclipse.html\">Eclipse<br></a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"github.html\">Github<br></a></div></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">Database</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"oracle.html\">Oracle</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Ms-sql</a></div></li><li class=\"nav-item nav-btn\"><a data-app-btn=\"true\" data-button=\"\" data-app-selector=\".btn\" class=\"nav-link btn btn-default btn-default-outline\" href=\"https://mobirise.com/\">DOWNLOAD</a></li>",
+          "logo": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1920.jpg",
+              "class": "",
+              "height": 128,
+              "alt": "ClintGetIT.com",
+              "link": "https://clintgetit.github.io/",
+              "title": "ClintGetIT.com",
+              "linkInNewWindow": false
+            }
+          },
+          "brand": "<a class=\"text-white\" data-app-selector=\".navbar-brand a\" data-app-btn=\"true\" href=\"https://clintgetit.github.io/ \" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">ClintGetIT.com<br><br></a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "dropdown-menu",
+          "_anchor": "dropdown-menu-4d"
+        },
+        {
+          "_inherit": "msg-box3",
+          "_styles": {
+            ".mbr-header .mbr-header__text": {
+              "text-align": "center",
+              "color": "#fff"
+            },
+            ".mbr-header .mbr-header__subtext": {
+              "text-align": "center",
+              "color": "#fff"
+            },
+            ".mbr-article": {
+              "color": "#fff"
+            }
+          },
+          "_params": {
+            "showTitle": true,
+            "showMeta": false,
+            "showCaption": "noCaption",
+            "showText": false,
+            "showButton": false,
+            "paddingTop": 3,
+            "paddingBottom": "2",
+            "bgImageRadio": true,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": false,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "darkBackground": true,
+            "overlay": true,
+            "overlayColor": "#28324e",
+            "overlayOpacity": 0.2
+          },
+          "title": "What is Java? - i",
+          "text": "",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">LEARN MORE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "meta": "By John Smith posted July 30, 2015",
+          "_name": "content5",
+          "_anchor": "content5-4e"
+        },
+        {
+          "_params": {
+            "showTitle": true,
+            "showMeta": false,
+            "showCaption": "noCaption",
+            "showText": true,
+            "showButton": true,
+            "paddingTop": 3,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "darkBackground": false,
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "MODERN STYLES",
+          "meta": "By John Smith posted July 30, 2015",
+          "text": "<p>Mobirise has provided for website developers a growing library of modern blocks which can be used either partially or in full for every website developed through the builder.</p>",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">SEE ALL TEMPLATES</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box3",
+          "_customCSS": ".mbr-header .mbr-header__text {\n  text-align: center;\n}\n.mbr-header .mbr-header__subtext {\n  text-align: center;\n}\n",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"39\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 25px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2 mbr-editable-full\" code-editable-id=\"255\"><p>\n\t\t\t\n</p><p>\n    <strong>Input and Output</strong>\n</p>\n<p>\n    system.out.println: passed to standard output stream and displayed on\n    terminal\n</p>\n<p>\n    Since the system.in object has only one method that reads only one byte,\n    you need to create a Scanner linked to System.in.\n</p>\n                <div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n\n<p>\n    Scanner in = new Scanner (System.in); // java.util.Scanner\n                    </p> </div>\n<p>\n    Method for reading next line nextLine () / method for dividing by\n    whitespace next () / method for reading integer nextInt () / method for\n    reading floating point nextDouble ()\n</p>\n<p>\n    Use haNextLine, hasNext, hasNextInt, hasNextDouble to check for another\n    line, word, integer, or floating point\n</p>\n<p><br><br>\n    <strong>Keeping passwords in the terminal</strong>\n</p>\n<p>\n    The Scanner uses the Console class because it is visible when a password is\n    entered.\n</p>\n<div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n           \n<p>\n    Console terminal = System.console ();\n</p>\n<p>\n    String username = terminal.readLine (\"User Name:\");\n</p>\n<p>\n    char [] passwd = terminal.readPassword (\"Password:\");\n    </p></div>\n<p><br><br>\n    <strong>Arrays and Array Lists</strong>\n</p>\n<p>\n    You need the new operator to initialize the array.\n</p>\n<p>\n    You can get the length of the array with the array name .length.\n</p>\n<p>\n    When you create an object array that is not a base type, you must also\n    initialize it.\n</p><div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n<p>\n\n    ArrayList = Generic ArrayList\n                </p></div>\n<p>\n    A wrapper class for the base type ArrayList &lt;Integer&gt; numbers = new\n    ArrayList &lt;&gt; ();\n</p>\n<p>\n    Note that the conversion between the base type and the wrapper type is the\n    only one. You should not use == as in if (numbers.get (i) == numbers.get\n    (j)), and use equals to compare and check.\n</p>\n<p><br><br>\n    <strong>Copy from array</strong>\n</p>\n<p>\n    Shallow copy\n</p><div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n\n<p>\n    int [] numbers = primes;\n</p>\n<p>\n    numbers [2] = 1;\n            </p></div>\n<p>\n    If primes also refer to the same array. Thus primes [2] change as well.\n</p>\n<p>\n    If you do not want this sharing, use the static method Arrays.copyOf.\n</p>\n<p>\n    Deep copy\n</p><div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n\n<p>\n    int [] copiedPrimes = Arrays.copyOf (primes, primes.length);\n            </p></div>\n<p><br><br>\n    <strong>Copy from array list</strong>\n</p>\n<p>\n    Shallow copy\n</p><div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n\n<p>\n    ArrayList &lt;String&gt; people = friends;\n</p>\n<p>\n    people.set (0, \"Mary\"); // friends.get (0) is also \"Mary\".\n            </p></div>\n<p>\n    Deep copy\n</p><div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n\n<p>\n    Arraylist &lt;String&gt; copiedFriends = new ArrayList &lt;&gt; (friends);\n            </p></div>\n<p>\n    To copy, you must create a new array list from the existing array list.\n</p>\n<p>\n    * If you want to copy an array to an array list, you can use the ArrayList\n    constructor.\n</p>\n<p>\n    However, you must enclose the array in a list with Arrays.asList.\n</p><div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n\n<p>\n    ArrayList &lt;String&gt; friends = new ArrayList &lt;&gt; (Arrays.asList\n    (names)); // names is an array\n            </p></div>\n<p><br><br>\n    <strong>Array algorithm</strong>\n</p>\n<p>\n    The Arrays and Collections classes provide algorithm implementations.\n</p><div style=\"border:0px solid; padding:10px;  background-color: #EFF2FB;\">\n\n<p>\n    Arrays.fill (numbers, 0); // int []\n</p>\n<p>\n    Collections.fill (friends, \"\"); // ArrayList &lt;String&gt;\n</p>\n<p>\n    Arrays.sort (names);\n</p>\n<p>\n    Collections.sort (friends);\n            </p></div>\n            \n              \n            </div>\n        </div><br><br><br><br><br>\n\t\t\n    </div>\n    <div class=\"mbr-section__container container mbr-section__container--last\" style=\"padding-bottom: 93px;\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 col-sm-offset-2\">\n                <div class=\"mbr-buttons mbr-buttons--center\"><a class=\"mbr-buttons__btn btn btn-lg btn-default mbr-editable-button\" href=\"github.html\" code-editable-id=\"256\">More Information</a></div>\n            </div>\n        </div>\n    </div>\n    \n\n</section> \n\n\n \n",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_customTemplate": true,
+          "_anchor": "msg-box3-4f"
+        },
+        {
+          "_params": {
+            "paddingTop": "2",
+            "paddingBottom": "2",
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#475577",
+            "overlay": true,
+            "overlayColor": "#444444",
+            "overlayOpacity": 0.8
+          },
+          "text": "Copyright (c) 2018 ClintGetIT.com",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "footer1",
+          "_anchor": "footer1-4g"
         }
       ]
     }
