@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.8.6, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.8.6, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/mbr-1920x1920.jpg" type="image/x-icon">
+  <meta name="description" content="">
+  <title>ora_001</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&subset=cyrillic,latin,greek,vietnamese">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/soundcloud-plugin/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/style.css">
+  <link rel="stylesheet" href="assets/dropdown-menu/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <section id="dropdown-menu-41" data-rv-view="128">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top">
+
+        <div class="container">
+
+            <div class="navbar-brand">
+                <a href="https://clintgetit.github.io/" class="navbar-logo"><img src="assets/images/mbr-1920x1920.jpg" alt="ClintGetIT.com" title="ClintGetIT.com"></a>
+                <a class="text-white" href="https://clintgetit.github.io/ ">ClintGetIT.com<br><br></a>
+            </div>
+
+            <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                <div class="hamburger-icon"></div>
+            </button>
+
+            <ul class="nav-dropdown collapse pull-xs-right navbar-toggleable-sm nav navbar-nav" id="exCollapsingNavbar"><li class="nav-item"><a class="nav-link link" href="index.html">Home</a></li><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="https://mobirise.com/" aria-expanded="false">Developer</a><div class="dropdown-menu"><a class="dropdown-item" href="ios.html">Ios</a><a class="dropdown-item" href="sap.html">Sap</a><a class="dropdown-item" href="java.html">Java</a><a class="dropdown-item" href="html.html">Html</a><a class="dropdown-item" href="eclipse.html">Eclipse<br></a><a class="dropdown-item" href="github.html">Github<br></a></div></li><li class="nav-item dropdown open"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="https://mobirise.com/" aria-expanded="true">Database</a><div class="dropdown-menu"><a class="dropdown-item" href="oracle.html">Oracle</a><a class="dropdown-item" href="https://mobirise.com/">Ms-sql</a></div></li></ul>
+
+        </div>
+
+    </nav>
+
+</section>
+
+<section class="engine"><a href="https://mobirise.info/k">how to develop free website</a></section><section class="mbr-section mbr-section--relative mbr-section--fixed-size mbr-parallax-background mbr-after-navbar" id="content5-42" data-rv-view="130" style="background-image: url(assets/images/bg3.jpg);">
+    <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(40, 50, 78);"></div>
+    <div class="mbr-section__container container mbr-section__container--isolated" style="padding-top: 93px; padding-bottom: 62px;">
+        <div class="mbr-header mbr-header--wysiwyg row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="mbr-header__text">Database Architecture</h3>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+</section>
+
+<div id="msg-box3-43" custom-code="true" data-rv-view="133"><section class="mbr-section mbr-section--relative mbr-section--fixed-size" data-rv-view="39" style="background-color: rgb(255, 255, 255);">
+    
+
+    <div class="mbr-section__container container mbr-section__container--middle" style="padding-top: 25px;">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2 mbr-editable-full"><p>
+			
+
+  </p><p>
+    <strong>Database Architecture</strong>
+</p>
+<p>
+    Database architecture = process + shared memory area + disk (physical file)
+    area
+</p>
+<p>
+    The structure of DBMS such as Oracle or MSSQL is as shown above.
+</p>
+<p>
+    <strong> </strong>
+</p>
+<p>
+    <strong> </strong>
+</p>
+<p>
+    <strong>Process</strong>
+</p>
+<p>
+    * oracle is created and operated on a per-process basis on linux. The SQL
+    server (mssql) is a thread-based architecture and oracle replaces the
+    process with threads in Windows. It is called a process because it performs
+    the same role anyway.
+</p>
+<p>
+    Processes are divided into server process and background process
+</p>
+<p>
+    <strong>- Server process</strong>
+</p>
+<p>
+    A server process is a process that processes various commands of a user
+    while communicating with a user process (client).
+</p>
+<p>
+    Specifically, it parses SQL and performs optimizations if necessary,
+    executes blocks of SQL, reads the blocks, sorts the read data, processes
+    the series of operations that the client requests and sends to the network,
+    It is a process that makes a system call request to delegate to a
+    background process.
+</p>
+<p>
+    There are two ways to connect the server process to
+</p>
+<p>
+    <strong>1)Dedicated Server</strong>
+</p>
+<p>
+    Each time a request comes in, a new server process is created, connected,
+    requested / answered, and removed
+</p>
+<p>
+    - process
+</p>
+<p>
+    1. Listener receives database connection request
+</p>
+<p>
+    2. Listener creates server process and requests connection
+</p>
+<p>
+    3. The server process sends a resend packet to the client
+</p>
+<p>
+    4. Responding to requests from clients
+</p>
+<p>
+    * If you repeat the connection request every time you execute SQL, the
+    server process will be repeatedly created and released. Therefore,
+    OLTP-based applications using a dedicated server method should use the
+    connection pooling technique.
+</p>
+<p>
+    <strong>2)Shared Server</strong>
+</p>
+<p>
+    In the way that one server process is shared by multiple user sessions,
+    multiple processes are opened in advance and shared and reused.
+</p>
+<p>
+    1. Listener receives database connection request
+</p>
+<p>
+    2. Send the listener's available Dispatcher port number to the client
+</p>
+<p>
+    3. Put the dispatcher's request into the request queue
+</p>
+<p>
+    4. The shared server gets the request from the request queue, resolves it,
+    and puts the response in the response queue.
+</p>
+<p>
+    5. Dispatcher gets results from response queue
+</p>
+<p>
+    6. Return the results to the client
+</p>
+<p>
+    <strong>- background process</strong>
+</p>
+<p>
+    In addition to doing what the server process does, it also reads the data
+    file and loads it into the DB buffer cache, free blocks by removing the
+    dirty block (the data written to the file and the block in which the data
+    written in the memory is different from the data) from the cache. , And the
+    redo log buffer is the process by which the DB system works well
+    internally.
+</p>
+<table width="1832" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td width="197">
+                <p align="center">
+                    <strong> Oracle</strong>
+                </p>
+            </td>
+            <td width="406">
+                <p align="center">
+                    <strong> SQL Server</strong>
+                </p>
+            </td>
+            <td width="1229">
+                <p align="center">
+                    <strong>note</strong>
+                    <strong> </strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="197">
+                <p align="center">
+                    System Monitor(SMON)
+                </p>
+            </td>
+            <td width="406">
+                <p align="center">
+                    Database clean up/ shrinking thread
+                </p>
+            </td>
+            <td width="1229">
+                <p>
+                    Perform recovery when restarting a failed system, processes
+                    to monitor temporary segments and extents (* Segments,
+                    extents are described below)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="197">
+                <p align="center">
+                    Process Monitor(PMON)
+                </p>
+            </td>
+            <td width="406">
+                <p align="center">
+                    Open Data Services(OPS)
+                </p>
+            </td>
+            <td width="1229">
+                <p>
+                    The process for recovering the resources used by the
+                    process that caused the error
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="197">
+                <p align="center">
+                    Database Writer(DBWR)
+                </p>
+            </td>
+            <td width="406">
+                <p align="center">
+                    Lazywriter thread
+                </p>
+            </td>
+            <td width="1229">
+                <p> The process of writing a dirty buffer (block) in the buffer cache to a data file</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="197">
+                <p align="center">
+                    Log Writer(LGWR)
+                </p>
+            </td>
+            <td width="406">
+                <p align="center">
+                    Log writer thread
+                </p>
+            </td>
+            <td width="1229">
+                <p>
+                    The process of writing log buffer entries to the redo log
+                    file
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="197">
+                <p align="center">
+                    Archiver(ARCn)
+                </p>
+            </td>
+            <td width="406">
+                <p align="center">
+                    .
+                </p>
+            </td>
+            <td width="1229">
+                <p> Filled Redo logs are reflected in Archive logs directory before they are overwritte</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="197">
+                <p align="center">
+                    Checkpoint(CKPT)
+                </p>
+            </td>
+            <td width="406">
+                <p align="center">
+                    Database Checkpoint thread
+                </p>
+            </td>
+            <td width="1229">
+                <p>
+                    A DBMS that uses a write ahead logging method (a mechanism
+                    that writes from a log before data change) manages to what
+                    extent the changes to the buffer block recorded in the redo
+                    log have been recorded in the data file (data
+                    synchronization) by checkpoint. A process used to recover
+                    an instance by writing log data to disk only after the
+                    checkpoint
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="197">
+                <p align="center">
+                    Recverer(RECO)
+                </p>
+            </td>
+            <td width="406">
+                <p align="center">
+                    Distributed Transaction Coordinator(DTC)
+                </p>
+            </td>
+            <td width="1229">
+                <p>
+                    Process to troubleshoot problems in the distributed
+                    transaction process
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>SMON, PMON, DBWR (DBWs), LGWR, and CKPT are five essential background processes.</p>
+<p>
+    <strong>Disk (physical) area - File structure</strong>
+</p>
+<p>
+    The disk area consists largely of data files + temporary data files + log
+    files.
+</p>
+<p>
+    <strong>- Data files</strong>
+</p>
+<p>
+    1)Block
+</p>
+<p>
+    The block contains various data, and the block header contains data for
+    managing the block.
+</p>
+<p>
+    One block can have various sizes of 2KB, 4KB, 8KB, 16KB, 32KB, and 64KB. (8
+    KB only for SQL server)
+</p>
+<p>
+    A block contains several records (data).
+</p>
+<p>
+    In the database, I / O is made in block units.
+</p>
+<p>
+    That is why the number of blocks to be read is minimized because the number
+    of blocks to be read depends on the performance.
+</p>
+<p>
+    The blocks with these characteristics are made logically the same as the
+    blocks.
+</p>
+<p>
+    2) Extent
+</p>
+<p>
+    An extent is a set of several contiguous blocks. (Bundle of blocks)
+</p>
+<p>
+    The unit of I / O is a block, but the unit to allocate space from the table
+    space is an extent.
+</p>
+<p>
+    3) Segment
+</p>
+<p>
+    A segment is an object that has multiple extents.
+</p>
+<p>
+    A segment is an object that requires storage space, such as a database
+    table, index, or undo.
+</p>
+<p>
+    4) Tablespace
+</p>
+<p>
+    A tablespace is a container for a segment, which consists of several data
+    files.
+</p>
+<p>
+    Normally, when you use a workbench in a DBMS like MySQL, you can see that
+    you are creating a table in a tablespace.
+</p>
+<p>
+    Represents a space with multiple tables.
+</p>
+<p>
+    Data files are created and managed with the above structure.
+</p>
+<p>
+    <strong>- Temporary data files</strong>
+</p>
+<p>
+    Temporary data files are used to temporarily store a result set in the
+    middle of a large amount of sorting or hashing operations when memory space
+    becomes insufficient. (Saved for a while and then deleted)
+</p>
+<p>
+    <strong>- Log file</strong>
+</p>
+<p>
+    1)online Redo Log
+</p>
+<p>
+    Use the online Redo log to recover if a cache change has not yet been
+    written to the datafile and the datafile has failed because it has failed.
+</p>
+<p>
+    online The redo log consists of at least two files. When one file is full,
+    it switches the log to the next file, keeps writing the log, and reuses the
+    first file when all the files are full.
+</p>
+<p>
+    2)Archived Redo Log
+</p>
+<p>
+    Online Redo This is a file that was backed up to another location before
+    the log was reused.
+</p>
+<p>
+    3)Control files
+</p>
+<p>
+    A file that is always referenced when starting the database.
+</p>
+<p>
+    It stores information such as the absolute path and file size of all the
+    files to be used in the database, and is referenced to check for the
+    existence of files.
+</p>
+<p>
+    4)Parameter file
+</p>
+<p>
+    It contains all relevant information such as how much space is allocated
+    for the shared memory area, the path of the control file, and the
+    configuration of the database.
+</p>
+<p>
+    <strong>Shared Memory Area - Memory Structure</strong>
+</p>
+<p>
+    The memory area is largely divided into a system shared memory area and a
+    process dedicated memory area.
+</p>
+<p>
+    1. The shared memory area is a memory area provided by the operating system
+    that allows multiple processes to access simultaneously
+</p>
+<p>
+    This is called the System Global Area (SGA), which includes the DB buffer
+    cache, shared pools, log buffers, large pools, and Java pools.
+</p>
+<p>
+    2. The process memory area is called the process global area (PGA), which
+    is the memory area of ​​the server process. It is used to sort the data and
+    to store the state information of the session and the cursor.
+</p>
+<p>
+    <strong>Processes in the shared memory area</strong>
+</p>
+<p>
+    1) DB buffer cache
+</p>
+<p>
+    It is a cache area that holds data blocks read from the data file of the
+    disk file.
+</p>
+<p>
+    All reads are done via the DB buffer cache and read from disk if the data
+    to be read is not in the DB buffer cache.
+</p>
+<p>
+    When reading from disk, it is loaded into the buffer cache and then read
+    from the buffer cache.
+</p>
+<p>
+    If a data change occurs and a dirty block occurs, the DBWR process writes
+    to the disk periodically.
+</p>
+<p>
+    The state of the buffer block
+</p>
+<p>
+    Free block: It means that it is in an empty state or in a state that it
+    contains data but it can be synchronized with the file and overwritten with
+    a matching state.
+</p>
+<p>
+    dirty block: A change that has occurred since being cached in the buffer
+    but has not yet been written to the file (not synchronized) and can not be
+    overwritten.
+</p>
+<p>
+    Pinned block: A read or write operation is in progress
+</p>
+<p>
+    2) Shared Pool
+</p>
+<p>
+    A shared pool consists of a dictionary cache and a library cache. Using the
+    LRU algorithm
+</p>
+<p>
+    - Dictionary cache
+</p>
+<p>
+    Tables, and indexes, plus metadata about table spaces, data files,
+    segments, extents, users, and constraints. (Such as table metadata
+    information)
+</p>
+<p>
+    - Library cache
+</p>
+<p>
+    It is a cache that stores user-executed SQL statements, execution plans,
+    and stored procedures.
+</p>
+<p>
+    When a user requests a result through an SQL command, it needs to create a
+    routine to optimally execute it. This is called an execution plan.
+</p>
+<p>
+    After analyzing the query syntax, Syntax check (semantics check), semantic
+    check (whether semantics such as table existence are correct), and
+    authority check (there is authorization) are performed and optimization
+    plan is created and formatted in a form that can be understood by the SQL
+    execution engine Is called hard parsing.
+</p>
+<p>
+    Optimization processes have the greatest impact on performance. To
+    eliminate these optimizations, store the SQL statements and execution plans
+    you used previously and store them in the library cache for immediate use.
+</p>
+<p>
+    3) Log buffer
+</p>
+<p>
+    Log all changes to the DB buffer cache to the log file.
+</p>
+<p>
+    This is a buffer because it is better for performance to collect logs than
+    to record every log.
+</p>
+<p>
+    Changes must first be written to the log buffer before the buffer cache
+    block is updated, and the log entries must be written to the log file
+    before writing the dirty blocks to disk. (Write Ahead Logging)
+</p>
+<p>
+    <strong>PGA (unshared independent memory space)</strong>
+</p>
+<p>
+    - UGA (User Global Area)
+</p>
+<p>
+    The memory space allocated to the PGA requires one process to have
+    independent memory space for multiple sessions, which is the UGA.
+</p>
+<p>
+    - Call Global Area (CGA)
+</p>
+<p>
+    The memory space allocated to the PGA includes information that should be
+    continuously referenced from one database call to the next call in the UGA
+    and stores the necessary data in the CGA only while the call is in
+    progress.
+</p>
+<p>
+    CGA is allocated every parse call (execute), execute call (fetch) and fetch
+    call (fetch) every time.
+</p>
+<p>
+    - Sort Area
+</p>
+<p>
+    Space used for collation
+</p>
+            
+            
+              
+            </div>
+        </div><br><br><br><br><br>
+		
+    </div>
+    <div class="mbr-section__container container mbr-section__container--last" style="padding-bottom: 93px;">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="mbr-buttons mbr-buttons--center"><a class="mbr-buttons__btn btn btn-lg btn-default mbr-editable-button" href="github.html">More Information</a></div>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+
+
+ 
+</div>
+
+<footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-44" data-rv-view="134" style="background-color: rgb(71, 85, 119);">
+    
+    <div class="mbr-section__container container">
+        <div class="mbr-footer mbr-footer--wysiwyg row" style="padding-top: 24.6px; padding-bottom: 24.6px;">
+            <div class="col-sm-12">
+                <p class="mbr-footer__copyright">Copyright (c) 2018 ClintGetIT.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/jarallax/jarallax.js"></script>
+  <script src="assets/mobirise/js/script.js"></script>
+  <script src="assets/dropdown-menu/script.js"></script>
+  
+  
+</body>
+</html>
