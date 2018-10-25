@@ -787,3 +787,40 @@
 #msg-box3-47 .mbr-header .mbr-header__subtext {
   text-align: center;
 }
+#dropdown-menu-49 .hide-buttons [data-button] {
+  display: none !important;
+}
+#dropdown-menu-49 .nav .link,
+#dropdown-menu-49 .dropdown-item {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+#dropdown-menu-49 .navbar,
+#dropdown-menu-49 .dropdown-menu {
+  background: #475577;
+}
+#dropdown-menu-49 .dropdown-menu .dropdown-toggle[aria-expanded="true"],
+#dropdown-menu-49 .dropdown-menu a:hover,
+#dropdown-menu-49 .dropdown-menu a:focus {
+  background: #3f4c6a;
+}
+#dropdown-menu-49 .navbar-toggler {
+  color: #ffffff;
+}
+#content5-4a .mbr-header .mbr-header__text {
+  text-align: center;
+  color: #fff;
+}
+#content5-4a .mbr-header .mbr-header__subtext {
+  text-align: center;
+  color: #fff;
+}
+#content5-4a .mbr-article {
+  color: #fff;
+}
+#msg-box3-4b .mbr-header .mbr-header__text {
+  text-align: center;
+}
+#msg-box3-4b .mbr-header .mbr-header__subtext {
+  text-align: center;
+}
