@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.8.6, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.8.6, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/mbr-1920x1920.jpg" type="image/x-icon">
+  <meta name="description" content="">
+  <title>ora_002</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&subset=cyrillic,latin,greek,vietnamese">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/soundcloud-plugin/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/style.css">
+  <link rel="stylesheet" href="assets/dropdown-menu/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <section id="dropdown-menu-45" data-rv-view="136">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top">
+
+        <div class="container">
+
+            <div class="navbar-brand">
+                <a href="https://clintgetit.github.io/" class="navbar-logo"><img src="assets/images/mbr-1920x1920.jpg" alt="ClintGetIT.com" title="ClintGetIT.com"></a>
+                <a class="text-white" href="https://clintgetit.github.io/ ">ClintGetIT.com<br><br></a>
+            </div>
+
+            <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                <div class="hamburger-icon"></div>
+            </button>
+
+            <ul class="nav-dropdown collapse pull-xs-right navbar-toggleable-sm nav navbar-nav" id="exCollapsingNavbar"><li class="nav-item"><a class="nav-link link" href="index.html">Home</a></li><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="https://mobirise.com/" aria-expanded="false">Developer</a><div class="dropdown-menu"><a class="dropdown-item" href="ios.html">Ios</a><a class="dropdown-item" href="sap.html">Sap</a><a class="dropdown-item" href="java.html">Java</a><a class="dropdown-item" href="html.html">Html</a><a class="dropdown-item" href="eclipse.html">Eclipse<br></a><a class="dropdown-item" href="github.html">Github<br></a></div></li><li class="nav-item dropdown open"><a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="https://mobirise.com/" aria-expanded="true">Database</a><div class="dropdown-menu"><a class="dropdown-item" href="oracle.html">Oracle</a><a class="dropdown-item" href="https://mobirise.com/">Ms-sql</a></div></li></ul>
+
+        </div>
+
+    </nav>
+
+</section>
+
+<section class="engine"><a href="https://mobirise.info/a">online website builder</a></section><section class="mbr-section mbr-section--relative mbr-section--fixed-size mbr-parallax-background mbr-after-navbar" id="content5-46" data-rv-view="138" style="background-image: url(assets/images/bg3.jpg);">
+    <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(40, 50, 78);"></div>
+    <div class="mbr-section__container container mbr-section__container--isolated" style="padding-top: 93px; padding-bottom: 62px;">
+        <div class="mbr-header mbr-header--wysiwyg row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="mbr-header__text">Database Performance Improvements</h3>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+</section>
+
+<div id="msg-box3-47" custom-code="true" data-rv-view="141"><section class="mbr-section mbr-section--relative mbr-section--fixed-size" data-rv-view="39" style="background-color: rgb(255, 255, 255);">
+    
+
+    <div class="mbr-section__container container mbr-section__container--middle" style="padding-top: 25px;">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2 mbr-editable-full"><p>
+			
+
+  </p><p>
+    <strong>Database Performance Improvements</strong>
+</p>
+<p>
+    Reducing the number of database SQL query calls
+</p>
+<p>
+    In this post, we will look at reducing the amount of queries in the
+    database in the first place, reducing the number of calls and decreasing
+    the volume of data coming and going (Network load).
+</p>
+<p>
+    In the database call and performance above, call is called through the
+    application for convenience, but the type of call is technically different.
+</p>
+<p>
+    • Parse Call: Call to request SQL parsing • Execute call: Call to execute
+    SQL calls • Fetch call: The result of a SELECT statement that requests data
+    transfer
+</p>
+<p>
+    • User call: Call through Application (external) calls • Recursive call:
+    Call that occurs inside the DBMS (data dictionary lookup for SQL parsing
+    and optimization, user-defined functions, performing SQL within the
+    procedure)
+</p>
+<p>
+    You just have to note that call is not divided by the same classification
+    criteria. (the kind of call varies)
+</p>
+<p>
+    This post is a light-hearted point of view of performance improvement, and
+    we'll look at some of the ways to improve user call.
+</p>
+<p>
+    <strong>1. Using one SQL</strong>
+</p>
+<p>
+    It's easy to learn how to improve your SQL tuning so that you can load the
+    same data into 1 SQL rather than hitting a loop in a program 100,000 times,
+    one million times, or more SQL queries.
+</p>
+<p>
+    Or, the SQL query is called one time, but the query that fetches the same
+    table several times internally requires tuning.
+</p>
+<p>
+    For example, suppose you want to (1) view (SELECT) which table (ex. The
+    number of records viewed is 100,000) (2) and insert it into another table
+    by filtering from the records you viewed.
+</p>
+<p>
+    Then it would have been 100,000 times, and the fetch call was 100k times
+    for the lookup of 100,000 cases, and the parse call and execute call were
+    less than 100,000 or (more than the number of insert inquiries).
+</p>
+<p>
+    This would result in a total of more than 300,000 calls to be addressed in
+    a single SQL call (parse call, execute call).
+</p>
+<p>
+    For example, let's say you need five calls to do one job. If you change the
+    number of calls that require 5 calls to one call at a time, there is a
+    five-fold performance improvement when you simply calculate the operation
+    24 hours a day.
+</p>
+<p>
+    <strong>2. Using Array Processing</strong>
+</p>
+<p>
+    This is the concept of batch collecting, rather than insert/update/delete
+    in the code, when working with large amounts.
+</p>
+<p>
+    Note that a series of processes must be carried out in all array units.
+</p>
+<p>
+    What I'm saying is that fetch is an array, and the next step is to handle
+    the insert and vice versa. (All tasks should be placed to maximize the
+    effect)
+</p>
+<p>
+    (Check the interface of the development language!)
+</p>
+<p>
+    <strong>3. Minimize Fetch Call</strong>
+</p>
+<p>
+    A DBMS cannot send a large volume of records to a client at once.
+</p>
+<p>
+    Therefore, it is possible to reduce the fetch call in this way to transfer
+    a certain amount by dividing.
+</p>
+<p>
+    In Oracle, you can adjust a certain amount of units through the ArraySize
+    or fetchsize settings.
+</p>
+<p>
+    For example, if ArraySize is set to 100 and you read 30,000 records, fetch
+    call will occur at 301.
+</p>
+<p>
+    OLTP is a good practice when you have a lot of query results (records), but
+    you only want to fetch some of them.
+</p>
+<p>
+    (This is referred to as partial-scope processing, because the user does not
+    read all tens of thousands of cases)
+</p>
+<p>
+    Note that the DBMS does not have any performance improvements when it is
+    programmed in such a way that partial-scope processing requires that all
+    values be fetched and processed by the developer.
+</p>
+<p>
+    Ultimately, the point is that you need to adjust the arraysize accordingly
+    to the amount of data that needs to be transmitted over the network.
+</p>
+<p>
+    -If you need to get all your data, it is better to arraysize. Although the
+    amount is intact, the number of fetch call decreases.
+</p>
+<p>
+    -If you need only a small fraction of the data in front of it, it is better
+    to arraysize.
+</p>
+<p>
+    Increasing the arraysize reduces network load and also reduces the number
+    of blocks that the server process should read.
+</p>
+<p>
+    The reason is that there are 10 records in one block, and two blocks, that
+    is, 20 records, when you need to read all 20 records, if ArraySize is 3,
+    block I/O occurs eight times, fetch call takes place seven times.
+</p>
+<p>
+    If ArraySize is 5, the block I/O occurs four times and fetch call also
+    happens four times.
+</p>
+<p>
+    However, ArraySize is not a good thing to raise. ArraySize and call numbers
+    are inversely proportional (?) , so test and use it properly.
+</p>
+<p>
+    <strong>4. Use of page processing</strong>
+</p>
+<p>
+    Improving performance with partial-scope processing is only possible in the
+    development environment of expressions that fetch only when the user
+    explicitly requests without closing the cursor.
+</p>
+<p>
+    In a Web application environment that does not persist connections with the
+    database, it is not possible to keep the cursor open and handle the
+    processing of an expression that performs an individual SQL statement
+    whenever the user requests the next page.
+</p>
+<p>
+    <strong>
+        5. Adult a distributed query, filtering only minimal data when remote
+        joins
+    </strong>
+</p>
+<p>
+    If you have created a distributed database system, you may need to send and
+    join tables in the remote.
+</p>
+<p>
+    If there are 500,000 records in the table that should be joined, the
+    network load will be sent and received for 500,000.
+</p>
+<p>
+    This will also result in poor query performance, so you should use a query
+    to split the required parts.
+</p>
+<p>
+    <strong>
+        6. Use user-defined functions, procedure only when absolutely necessary
+    </strong>
+</p>
+<p>
+    User-defined functions and procedure that are performed inside a DBMS are
+    not fully compiled as Native code, like intrinsic functions, and run on
+    separate engines such as virtual machines.
+</p>
+<p>
+    This causes the context switching to occur each time it runs, which
+    degrades performance compared to intrinsic functions.
+</p>
+<p>
+    Additionally, a user-defined function with another built-in query statement
+    falls further.
+</p>
+<p>
+    Instead of recommending the end of the writing, you should find a suitable
+    time.
+</p>
+<p>
+    When appropriate, it is time to call a small amount and perform a large
+    amount of SQL from the inside.
+</p>
+            
+              
+            </div>
+        </div><br><br><br><br><br>
+		
+    </div>
+    <div class="mbr-section__container container mbr-section__container--last" style="padding-bottom: 93px;">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="mbr-buttons mbr-buttons--center"><a class="mbr-buttons__btn btn btn-lg btn-default mbr-editable-button" href="github.html">More Information</a></div>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+
+
+ 
+</div>
+
+<footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-48" data-rv-view="142" style="background-color: rgb(71, 85, 119);">
+    
+    <div class="mbr-section__container container">
+        <div class="mbr-footer mbr-footer--wysiwyg row" style="padding-top: 24.6px; padding-bottom: 24.6px;">
+            <div class="col-sm-12">
+                <p class="mbr-footer__copyright">Copyright (c) 2018 ClintGetIT.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/jarallax/jarallax.js"></script>
+  <script src="assets/mobirise/js/script.js"></script>
+  <script src="assets/dropdown-menu/script.js"></script>
+  
+  
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "ClintGetIT.com",
-    "currentPage": "ora001.html",
+    "currentPage": "ora002.html",
     "theme": {
       "name": "default",
       "title": "Mobirise",
@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.8.6",
     "siteFonts": [],
-    "uniqCompNum": 149,
+    "uniqCompNum": 153,
     "versionPublish": "4.8.6",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -397,7 +397,7 @@
       "settings": {
         "meta_descr": "TEST",
         "title": "test",
-        "order": 16
+        "order": 17
       },
       "components": [
         {
@@ -1884,7 +1884,7 @@
         "header_custom": "",
         "footer_custom": "",
         "html_before": "",
-        "order": 13
+        "order": 14
       },
       "components": [
         {
@@ -2052,7 +2052,7 @@
         "header_custom": "",
         "footer_custom": "",
         "html_before": "",
-        "order": 14
+        "order": 15
       },
       "components": [
         {
@@ -2220,7 +2220,7 @@
         "header_custom": "",
         "footer_custom": "",
         "html_before": "",
-        "order": 15
+        "order": 16
       },
       "components": [
         {
@@ -2882,6 +2882,174 @@
           ],
           "_name": "footer1",
           "_anchor": "footer1-44"
+        }
+      ]
+    },
+    "ora002.html": {
+      "settings": {
+        "title": "ora_002",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 13
+      },
+      "components": [
+        {
+          "_styles": {
+            ".hide-buttons [data-button]": {
+              "display": "none !important"
+            },
+            ".navbar-brand a": {},
+            ".nav .link, .dropdown-item": {
+              "font-size": "1.2em",
+              "color": "#ffffff"
+            },
+            ".navbar, .dropdown-menu": {
+              "background": "#475577"
+            },
+            ".dropdown-menu .dropdown-toggle[aria-expanded=\"true\"], .dropdown-menu a:hover, .dropdown-menu a:focus": {
+              "background": "#3f4c6a"
+            },
+            ".navbar-toggler": {
+              "color": "#ffffff"
+            }
+          },
+          "_params": {
+            "logo": true,
+            "showBrand": true,
+            "hideButtons": true,
+            "sticky": true,
+            "transparent": false,
+            "bgColor": "#475577",
+            "fontSize": "1.2",
+            "fontName": {},
+            "fontColor": "#ffffff"
+          },
+          "items": "<li class=\"nav-item\"><a data-app-btn=\"true\" class=\"nav-link link\" href=\"index.html\">Home</a></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">Developer</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"ios.html\">Ios</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"sap.html\">Sap</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"java.html\">Java</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"html.html\">Html</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"eclipse.html\">Eclipse<br></a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"github.html\">Github<br></a></div></li><li class=\"nav-item dropdown open\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"true\">Database</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"oracle.html\">Oracle</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Ms-sql</a></div></li><li class=\"nav-item nav-btn\"><a data-app-btn=\"true\" data-button=\"\" data-app-selector=\".btn\" class=\"nav-link btn btn-default btn-default-outline\" href=\"https://mobirise.com/\">DOWNLOAD</a></li>",
+          "logo": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/mbr-1920x1920.jpg",
+              "class": "",
+              "height": 128,
+              "alt": "ClintGetIT.com",
+              "link": "https://clintgetit.github.io/",
+              "title": "ClintGetIT.com",
+              "linkInNewWindow": false
+            }
+          },
+          "brand": "<a class=\"text-white\" data-app-selector=\".navbar-brand a\" data-app-btn=\"true\" href=\"https://clintgetit.github.io/ \" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">ClintGetIT.com<br><br></a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "dropdown-menu",
+          "_anchor": "dropdown-menu-45"
+        },
+        {
+          "_inherit": "msg-box3",
+          "_styles": {
+            ".mbr-header .mbr-header__text": {
+              "text-align": "center",
+              "color": "#fff"
+            },
+            ".mbr-header .mbr-header__subtext": {
+              "text-align": "center",
+              "color": "#fff"
+            },
+            ".mbr-article": {
+              "color": "#fff"
+            }
+          },
+          "_params": {
+            "showTitle": true,
+            "showMeta": false,
+            "showCaption": "noCaption",
+            "showText": false,
+            "showButton": false,
+            "paddingTop": 3,
+            "paddingBottom": "2",
+            "bgImageRadio": true,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": false,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "darkBackground": true,
+            "overlay": true,
+            "overlayColor": "#28324e",
+            "overlayOpacity": 0.2
+          },
+          "title": "Database Performance Improvements",
+          "text": "",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">LEARN MORE</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "meta": "By John Smith posted July 30, 2015",
+          "_name": "content5",
+          "_anchor": "content5-46"
+        },
+        {
+          "_params": {
+            "showTitle": true,
+            "showMeta": false,
+            "showCaption": "noCaption",
+            "showText": true,
+            "showButton": true,
+            "paddingTop": 3,
+            "paddingBottom": 3,
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "darkBackground": false,
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "MODERN STYLES",
+          "meta": "By John Smith posted July 30, 2015",
+          "text": "<p>Mobirise has provided for website developers a growing library of modern blocks which can be used either partially or in full for every website developed through the builder.</p>",
+          "button": "<a data-app-btn=\"true\" class=\"mbr-buttons__btn btn btn-lg btn-default\" href=\"https://mobirise.com\">SEE ALL TEMPLATES</a>",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "msg-box3",
+          "_customCSS": ".mbr-header .mbr-header__text {\n  text-align: center;\n}\n.mbr-header .mbr-header__subtext {\n  text-align: center;\n}\n",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"39\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 25px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2 mbr-editable-full\" code-editable-id=\"169\"><p>\n\t\t\t\n\n  </p><p>\n    <strong>Database Performance Improvements</strong>\n</p>\n<p>\n    Reducing the number of database SQL query calls\n</p>\n<p>\n    In this post, we will look at reducing the amount of queries in the\n    database in the first place, reducing the number of calls and decreasing\n    the volume of data coming and going (Network load).\n</p>\n<p>\n    In the database call and performance above, call is called through the\n    application for convenience, but the type of call is technically different.\n</p>\n<p>\n    • Parse Call: Call to request SQL parsing • Execute call: Call to execute\n    SQL calls • Fetch call: The result of a SELECT statement that requests data\n    transfer\n</p>\n<p>\n    • User call: Call through Application (external) calls • Recursive call:\n    Call that occurs inside the DBMS (data dictionary lookup for SQL parsing\n    and optimization, user-defined functions, performing SQL within the\n    procedure)\n</p>\n<p>\n    You just have to note that call is not divided by the same classification\n    criteria. (the kind of call varies)\n</p>\n<p>\n    This post is a light-hearted point of view of performance improvement, and\n    we'll look at some of the ways to improve user call.\n</p>\n<p>\n    <strong>1. Using one SQL</strong>\n</p>\n<p>\n    It's easy to learn how to improve your SQL tuning so that you can load the\n    same data into 1 SQL rather than hitting a loop in a program 100,000 times,\n    one million times, or more SQL queries.\n</p>\n<p>\n    Or, the SQL query is called one time, but the query that fetches the same\n    table several times internally requires tuning.\n</p>\n<p>\n    For example, suppose you want to (1) view (SELECT) which table (ex. The\n    number of records viewed is 100,000) (2) and insert it into another table\n    by filtering from the records you viewed.\n</p>\n<p>\n    Then it would have been 100,000 times, and the fetch call was 100k times\n    for the lookup of 100,000 cases, and the parse call and execute call were\n    less than 100,000 or (more than the number of insert inquiries).\n</p>\n<p>\n    This would result in a total of more than 300,000 calls to be addressed in\n    a single SQL call (parse call, execute call).\n</p>\n<p>\n    For example, let's say you need five calls to do one job. If you change the\n    number of calls that require 5 calls to one call at a time, there is a\n    five-fold performance improvement when you simply calculate the operation\n    24 hours a day.\n</p>\n<p>\n    <strong>2. Using Array Processing</strong>\n</p>\n<p>\n    This is the concept of batch collecting, rather than insert/update/delete\n    in the code, when working with large amounts.\n</p>\n<p>\n    Note that a series of processes must be carried out in all array units.\n</p>\n<p>\n    What I'm saying is that fetch is an array, and the next step is to handle\n    the insert and vice versa. (All tasks should be placed to maximize the\n    effect)\n</p>\n<p>\n    (Check the interface of the development language!)\n</p>\n<p>\n    <strong>3. Minimize Fetch Call</strong>\n</p>\n<p>\n    A DBMS cannot send a large volume of records to a client at once.\n</p>\n<p>\n    Therefore, it is possible to reduce the fetch call in this way to transfer\n    a certain amount by dividing.\n</p>\n<p>\n    In Oracle, you can adjust a certain amount of units through the ArraySize\n    or fetchsize settings.\n</p>\n<p>\n    For example, if ArraySize is set to 100 and you read 30,000 records, fetch\n    call will occur at 301.\n</p>\n<p>\n    OLTP is a good practice when you have a lot of query results (records), but\n    you only want to fetch some of them.\n</p>\n<p>\n    (This is referred to as partial-scope processing, because the user does not\n    read all tens of thousands of cases)\n</p>\n<p>\n    Note that the DBMS does not have any performance improvements when it is\n    programmed in such a way that partial-scope processing requires that all\n    values be fetched and processed by the developer.\n</p>\n<p>\n    Ultimately, the point is that you need to adjust the arraysize accordingly\n    to the amount of data that needs to be transmitted over the network.\n</p>\n<p>\n    -If you need to get all your data, it is better to arraysize. Although the\n    amount is intact, the number of fetch call decreases.\n</p>\n<p>\n    -If you need only a small fraction of the data in front of it, it is better\n    to arraysize.\n</p>\n<p>\n    Increasing the arraysize reduces network load and also reduces the number\n    of blocks that the server process should read.\n</p>\n<p>\n    The reason is that there are 10 records in one block, and two blocks, that\n    is, 20 records, when you need to read all 20 records, if ArraySize is 3,\n    block I/O occurs eight times, fetch call takes place seven times.\n</p>\n<p>\n    If ArraySize is 5, the block I/O occurs four times and fetch call also\n    happens four times.\n</p>\n<p>\n    However, ArraySize is not a good thing to raise. ArraySize and call numbers\n    are inversely proportional (?) , so test and use it properly.\n</p>\n<p>\n    <strong>4. Use of page processing</strong>\n</p>\n<p>\n    Improving performance with partial-scope processing is only possible in the\n    development environment of expressions that fetch only when the user\n    explicitly requests without closing the cursor.\n</p>\n<p>\n    In a Web application environment that does not persist connections with the\n    database, it is not possible to keep the cursor open and handle the\n    processing of an expression that performs an individual SQL statement\n    whenever the user requests the next page.\n</p>\n<p>\n    <strong>\n        5. Adult a distributed query, filtering only minimal data when remote\n        joins\n    </strong>\n</p>\n<p>\n    If you have created a distributed database system, you may need to send and\n    join tables in the remote.\n</p>\n<p>\n    If there are 500,000 records in the table that should be joined, the\n    network load will be sent and received for 500,000.\n</p>\n<p>\n    This will also result in poor query performance, so you should use a query\n    to split the required parts.\n</p>\n<p>\n    <strong>\n        6. Use user-defined functions, procedure only when absolutely necessary\n    </strong>\n</p>\n<p>\n    User-defined functions and procedure that are performed inside a DBMS are\n    not fully compiled as Native code, like intrinsic functions, and run on\n    separate engines such as virtual machines.\n</p>\n<p>\n    This causes the context switching to occur each time it runs, which\n    degrades performance compared to intrinsic functions.\n</p>\n<p>\n    Additionally, a user-defined function with another built-in query statement\n    falls further.\n</p>\n<p>\n    Instead of recommending the end of the writing, you should find a suitable\n    time.\n</p>\n<p>\n    When appropriate, it is time to call a small amount and perform a large\n    amount of SQL from the inside.\n</p>\n            \n              \n            </div>\n        </div><br><br><br><br><br>\n\t\t\n    </div>\n    <div class=\"mbr-section__container container mbr-section__container--last\" style=\"padding-bottom: 93px;\">\n        <div class=\"row\">\n            <div class=\"col-sm-8 col-sm-offset-2\">\n                <div class=\"mbr-buttons mbr-buttons--center\"><a class=\"mbr-buttons__btn btn btn-lg btn-default mbr-editable-button\" href=\"github.html\" code-editable-id=\"170\">More Information</a></div>\n            </div>\n        </div>\n    </div>\n    \n\n</section>\n\n\n \n",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_customTemplate": true,
+          "_anchor": "msg-box3-47"
+        },
+        {
+          "_params": {
+            "paddingTop": "2",
+            "paddingBottom": "2",
+            "bgImageRadio": false,
+            "bgImage": "images/bg3.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#475577",
+            "overlay": true,
+            "overlayColor": "#444444",
+            "overlayOpacity": 0.8
+          },
+          "text": "Copyright (c) 2018 ClintGetIT.com",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "footer1",
+          "_anchor": "footer1-48"
         }
       ]
     }
