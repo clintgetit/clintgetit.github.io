@@ -861,3 +861,55 @@
 #msg-box3-4f .mbr-header .mbr-header__subtext {
   text-align: center;
 }
+@isPublish: true;
+
+#dropdown-menu-4l {
+.hide-buttons [data-button] {
+  display: none !important;
+}
+.navbar-brand a {
+}
+.nav .link, .dropdown-item {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+.navbar, .dropdown-menu {
+  background: #475577;
+}
+.dropdown-menu .dropdown-toggle[aria-expanded="true"], .dropdown-menu a:hover, .dropdown-menu a:focus {
+  background: #3f4c6a;
+}
+.navbar-toggler {
+  color: #ffffff;
+}
+}
+
+#content5-4m {
+.mbr-header .mbr-header__text {
+  text-align: center;
+  color: #fff;
+}
+.mbr-header .mbr-header__subtext {
+  text-align: center;
+  color: #fff;
+}
+.mbr-article {
+  color: #fff;
+}
+}
+
+#msg-box3-4n {
+.mbr-header .mbr-header__text {
+  text-align: center;
+}
+.mbr-header .mbr-header__subtext {
+  text-align: center;
+}
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>}
+
+#footer1-4o {
+}
