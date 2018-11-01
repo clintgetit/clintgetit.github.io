@@ -20,7 +20,7 @@
   
 </head>
 <body>
-  <section id="dropdown-menu-4l" data-rv-view="168">
+  <section id="dropdown-menu-4t" data-rv-view="184">
 
     <nav class="navbar navbar-dropdown navbar-fixed-top">
 
@@ -43,7 +43,7 @@
 
 </section>
 
-<section class="engine"><a href="https://mobirise.info/n">simple website templates</a></section><section class="mbr-section mbr-section--relative mbr-section--fixed-size mbr-parallax-background mbr-after-navbar" id="content5-4m" data-rv-view="170" style="background-image: url(assets/images/bg3.jpg);">
+<section class="engine"><a href="https://mobirise.info/s">free bootstrap themes</a></section><section class="mbr-section mbr-section--relative mbr-section--fixed-size mbr-parallax-background mbr-after-navbar" id="content5-4u" data-rv-view="186" style="background-image: url(assets/images/bg3.jpg);">
     <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(40, 50, 78);"></div>
     <div class="mbr-section__container container mbr-section__container--isolated" style="padding-top: 93px; padding-bottom: 62px;">
         <div class="mbr-header mbr-header--wysiwyg row">
@@ -57,7 +57,7 @@
     
 </section>
 
-<div id="msg-box3-4n" custom-code="true" data-rv-view="173"><section class="mbr-section mbr-section--relative mbr-section--fixed-size" data-rv-view="39" style="background-color: rgb(255, 255, 255);">
+<div id="msg-box3-4v" custom-code="true" data-rv-view="189"><section class="mbr-section mbr-section--relative mbr-section--fixed-size" data-rv-view="39" style="background-color: rgb(255, 255, 255);">
     
 
     <div class="mbr-section__container container mbr-section__container--middle" style="padding-top: 25px;">
@@ -66,215 +66,1052 @@
 			
 
   </p>
- <div style="text-align:right;"> <div id="google_translate_element"></div><script type="text/javascript">
+<div style="text-align:right;"> <div id="google_translate_element"></div><script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </div>
-        
-                <p>
-    <strong>Database Performance Improvements</strong>
-</p>
-<p>
-    Reducing the number of database SQL query calls
-</p>
-<p>
-    In this post, we will look at reducing the amount of queries in the
-    database in the first place, reducing the number of calls and decreasing
-    the volume of data coming and going (Network load).
-</p>
-<p>
-    In the database call and performance above, call is called through the
-    application for convenience, but the type of call is technically different.
-</p>
-<p>
-    • Parse Call: Call to request SQL parsing • Execute call: Call to execute
-    SQL calls • Fetch call: The result of a SELECT statement that requests data
-    transfer
-</p>
-<p>
-    • User call: Call through Application (external) calls • Recursive call:
-    Call that occurs inside the DBMS (data dictionary lookup for SQL parsing
-    and optimization, user-defined functions, performing SQL within the
-    procedure)
-</p>
-<p>
-    You just have to note that call is not divided by the same classification
-    criteria. (the kind of call varies)
-</p>
-<p>
-    This post is a light-hearted point of view of performance improvement, and
-    we'll look at some of the ways to improve user call.
-</p>
-<p>
-    <strong>1. Using one SQL</strong>
-</p>
-<p>
-    It's easy to learn how to improve your SQL tuning so that you can load the
-    same data into 1 SQL rather than hitting a loop in a program 100,000 times,
-    one million times, or more SQL queries.
-</p>
-<p>
-    Or, the SQL query is called one time, but the query that fetches the same
-    table several times internally requires tuning.
-</p>
-<p>
-    For example, suppose you want to (1) view (SELECT) which table (ex. The
-    number of records viewed is 100,000) (2) and insert it into another table
-    by filtering from the records you viewed.
-</p>
-<p>
-    Then it would have been 100,000 times, and the fetch call was 100k times
-    for the lookup of 100,000 cases, and the parse call and execute call were
-    less than 100,000 or (more than the number of insert inquiries).
-</p>
-<p>
-    This would result in a total of more than 300,000 calls to be addressed in
-    a single SQL call (parse call, execute call).
-</p>
-<p>
-    For example, let's say you need five calls to do one job. If you change the
-    number of calls that require 5 calls to one call at a time, there is a
-    five-fold performance improvement when you simply calculate the operation
-    24 hours a day.
-</p>
-<p>
-    <strong>2. Using Array Processing</strong>
-</p>
-<p>
-    This is the concept of batch collecting, rather than insert/update/delete
-    in the code, when working with large amounts.
-</p>
-<p>
-    Note that a series of processes must be carried out in all array units.
-</p>
-<p>
-    What I'm saying is that fetch is an array, and the next step is to handle
-    the insert and vice versa. (All tasks should be placed to maximize the
-    effect)
-</p>
-<p>
-    (Check the interface of the development language!)
-</p>
-<p>
-    <strong>3. Minimize Fetch Call</strong>
-</p>
-<p>
-    A DBMS cannot send a large volume of records to a client at once.
-</p>
-<p>
-    Therefore, it is possible to reduce the fetch call in this way to transfer
-    a certain amount by dividing.
-</p>
-<p>
-    In Oracle, you can adjust a certain amount of units through the ArraySize
-    or fetchsize settings.
-</p>
-<p>
-    For example, if ArraySize is set to 100 and you read 30,000 records, fetch
-    call will occur at 301.
-</p>
-<p>
-    OLTP is a good practice when you have a lot of query results (records), but
-    you only want to fetch some of them.
-</p>
-<p>
-    (This is referred to as partial-scope processing, because the user does not
-    read all tens of thousands of cases)
-</p>
-<p>
-    Note that the DBMS does not have any performance improvements when it is
-    programmed in such a way that partial-scope processing requires that all
-    values be fetched and processed by the developer.
-</p>
-<p>
-    Ultimately, the point is that you need to adjust the arraysize accordingly
-    to the amount of data that needs to be transmitted over the network.
-</p>
-<p>
-    -If you need to get all your data, it is better to arraysize. Although the
-    amount is intact, the number of fetch call decreases.
-</p>
-<p>
-    -If you need only a small fraction of the data in front of it, it is better
-    to arraysize.
-</p>
-<p>
-    Increasing the arraysize reduces network load and also reduces the number
-    of blocks that the server process should read.
-</p>
-<p>
-    The reason is that there are 10 records in one block, and two blocks, that
-    is, 20 records, when you need to read all 20 records, if ArraySize is 3,
-    block I/O occurs eight times, fetch call takes place seven times.
-</p>
-<p>
-    If ArraySize is 5, the block I/O occurs four times and fetch call also
-    happens four times.
-</p>
-<p>
-    However, ArraySize is not a good thing to raise. ArraySize and call numbers
-    are inversely proportional (?) , so test and use it properly.
-</p>
-<p>
-    <strong>4. Use of page processing</strong>
-</p>
-<p>
-    Improving performance with partial-scope processing is only possible in the
-    development environment of expressions that fetch only when the user
-    explicitly requests without closing the cursor.
-</p>
-<p>
-    In a Web application environment that does not persist connections with the
-    database, it is not possible to keep the cursor open and handle the
-    processing of an expression that performs an individual SQL statement
-    whenever the user requests the next page.
-</p>
-<p>
-    <strong>
-        5. Adult a distributed query, filtering only minimal data when remote
-        joins
-    </strong>
-</p>
-<p>
-    If you have created a distributed database system, you may need to send and
-    join tables in the remote.
-</p>
-<p>
-    If there are 500,000 records in the table that should be joined, the
-    network load will be sent and received for 500,000.
-</p>
-<p>
-    This will also result in poor query performance, so you should use a query
-    to split the required parts.
-</p>
-<p>
-    <strong>
-        6. Use user-defined functions, procedure only when absolutely necessary
-    </strong>
-</p>
-<p>
-    User-defined functions and procedure that are performed inside a DBMS are
-    not fully compiled as Native code, like intrinsic functions, and run on
-    separate engines such as virtual machines.
-</p>
-<p>
-    This causes the context switching to occur each time it runs, which
-    degrades performance compared to intrinsic functions.
-</p>
-<p>
-    Additionally, a user-defined function with another built-in query statement
-    falls further.
-</p>
-<p>
-    Instead of recommending the end of the writing, you should find a suitable
-    time.
-</p>
-<p>
-    When appropriate, it is time to call a small amount and perform a large
-    amount of SQL from the inside.
-</p>
+                
+                <p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">오라클 vs MS SQL 함수 비교</span></p>
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 13.5pt;">수식/수치 연산 함수 </span></strong></p>
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">다음은 Oracle에서 <strong>지원하는</strong> 수식/수치 연산 함수와 그에 상응하는 Microsoft SQL Server의 함수를 정리한 표입니다. </span></p>
+<table style="border: 1pt outset navy; width: 90%;" width="90%">
+<tbody>
+<tr>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">함수 설명 </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Oracle </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Microsoft SQL Server</span></strong></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">절대 값 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ABS </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ABS </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">아크 코사인 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ACOS </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ACOS </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">아크 사인 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ASIN </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ASIN </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">n</span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">의 아크 탄젠트 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ATAN </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ATAN </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">n</span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">과 m의 아크 탄젠트 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ATAN2 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ATN2 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">최소 정수 &gt;= 값</span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CEIL </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CEILING </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">코사인 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">COS </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">COS </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">쌍곡선 코사인 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">COSH </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">COT </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">지수 값 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">EXP </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">EXP </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">최대 정수 &lt;= 값 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">FLOOR </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">FLOOR </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">자연 로그 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LN </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LOG </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">밑이 n인 로그 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LOG(N) </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음</span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">상용 로그 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LOG(10) </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LOG10 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">나머지 연산자 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">MOD </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">USE MODULO (%) OPERATOR </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">거듭제곱 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">POWER </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">POWER </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">난수 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">RAND </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">반올림 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ROUND </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ROUND </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">숫자 부호 표시 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SIGN </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SIGN </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">사인 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SIN </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SIN </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">쌍곡선 사인 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SINH </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">제곱근 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SQRT </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SQRT </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">탄젠트 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TAN </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TAN </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">쌍곡선 탄젠트 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TANH </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">잘라내기 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TRUNC </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">목록의 최대값 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">GREATEST </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">목록의 최소값 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LEAST </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">NULL</span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">일 때 숫자 변환 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">NVL </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ISNULL </span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 13.5pt;">문자열 함수 </span></strong></p>
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">다음은 Oracle에서 지원하는 문자열 함수 및 그에 상응하는 Microsoft SQL Server의 함수를 정리한 표입니다. </span></p>
+<table style="border: 1pt outset navy; width: 90%;" width="90%">
+<tbody>
+<tr>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">함수 설명 </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Oracle </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Microsoft SQL Server</span></strong></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자를 ASCII로 변환 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ASCII </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ASCII </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자열 연결 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CONCAT </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">(</span><em><span style="color: #474747; font-family: 굴림; font-size: 12pt;">식</span></em><span style="color: #474747; font-family: 굴림; font-size: 12pt;"> + </span><em><span style="color: #474747; font-family: 굴림; font-size: 12pt;">식</span></em><span style="color: #474747; font-family: 굴림; font-size: 12pt;">)</span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ASCII</span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">를 문자로 변환 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CHR </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CHAR </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자열의 문자 시작 위치 반환(왼쪽부터) </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">INSTR </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CHARINDEX </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">소문자로 변환 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LOWER </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LOWER </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">대문자로 변환 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">UPPER </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">UPPER </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자열의 왼쪽 채우기 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LPAD </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">선행 공백 제거 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LTRIM </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LTRIM </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">후행 공백 제거 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">RTRIM </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">RTRIM </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자열의 패턴 시작 위치 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">INSTR </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">PATINDEX </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자열을 여러 번 반복 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">RPAD </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">REPLICATE </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자열의 발음 기호 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SOUNDEX </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SOUNDEX </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">반복되는 공백 문자열 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">RPAD </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SPACE </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">수치 데이터에서 변환된 문자 데이터 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TO_CHAR </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">STR </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">부분 문자열 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SUBSTR </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SUBSTRING </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자 바꾸기 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">REPLACE </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">STUFF </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자열에서 각 단어의 첫 문자를 대문자로 만들기 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">INITCAP </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자열 번역 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TRANSLATE </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자열 길이 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LENGTH </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">DATELENGTH </span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">또는 LEN </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">목록에서 가장 큰 문자열 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">GREATEST </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">목록에서 가장 작은 문자열 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LEAST </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">NULL</span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">일 때 문자열 변환 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">NVL </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ISNULL </span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 13.5pt;">날짜 함수 </span></strong></p>
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">다음은 Oracle에서 지원하는 날짜 함수 및 그에 상응하는 Microsoft SQL Server의 함수를 정리한 표입니다. </span></p>
+<table style="border: 1pt outset navy; width: 90%;" width="90%">
+<tbody>
+<tr>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">함수 설명 </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Oracle </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Microsoft SQL Server</span></strong></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">날짜 추가 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">(</span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">날짜 열의 +/- 값) 또는 ADD_MONTHS</span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">DATEADD </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">날짜 차이 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">(</span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">날짜 열의 +/- 값) 또는 MONTHS_BETWEEN</span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">DATEDIFF </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">현재 날짜와 시간 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SYSDATE </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">GETDATE() </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">달의 마지막 날 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LAST_DAY </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">표준 시간대 변환 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">NEW_TIME </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">다음 날의 요일 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">NEXT_DAY </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">날짜의 문자열 표시 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TO_CHAR </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">DATENAME </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">날짜의 정수 표시 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TO_NUMBER(TO_CHAR)) </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">DATEPART </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">날짜 반올림 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ROUND </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CONVERT </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">날짜 잘라내기 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TRUNC </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CONVERT </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자열을 날짜로 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TO_DATE </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CONVERT </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">NULL</span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">일 때 날짜 변환 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">NVL </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">ISNULL </span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 13.5pt;">변환 함수 </span></strong></p>
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">다음은 Oracle에서 지원하는 변환 함수 및 그에 상응하는 Microsoft SQL Server의 함수를 정리한 표입니다. </span></p>
+<table style="border: 1pt outset navy; width: 90%;" width="90%">
+<tbody>
+<tr>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">함수 설명 </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Oracle </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Microsoft SQL Server</span></strong></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">숫자를 문자로 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TO_CHAR </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CONVERT </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자를 숫자로 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TO_NUMBER </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CONVERT </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">날짜를 문자로 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TO_CHAR </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CONVERT </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">문자를 날짜로 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">TO_DATE </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CONVERT </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">16</span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">진수를 이진수로 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">HEX_TO_RAW </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CONVERT </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">이진수를 16진수로 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">RAW_TO_HEX </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CONVERT </span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 13.5pt;">기타 행 수준 함수 </span></strong></p>
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">다음은 Oracle에서 지원하는 기타 행 수준 함수 및 그에 상응하는 Microsoft SQL Server의 함수를 정리한 표입니다. </span></p>
+<table style="border: 1pt outset navy; width: 90%;" width="90%">
+<tbody>
+<tr>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">함수 설명 </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Oracle </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Microsoft SQL Server</span></strong></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">NULL</span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">이 아닌 첫째 식 반환 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">DECODE </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">COALESCE </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">현재 시퀀스 값 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CURRVAL </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">다음 시퀀스 값 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">NEXTVAL </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">식1 = 식2일 때 NULL 반환 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">DECODE </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">NULLIF </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">사용자의 로그인 ID 번호 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">UID </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SUSER_ID </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">사용자의 로그인 이름 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">USER </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SUSER_NAME </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">사용자의 데이터베이스 ID 번호 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">UID </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">USER_ID </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">사용자의 데이터베이스 이름 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">USER </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">USER_NAME </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">현재 사용자 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CURRENT_USER </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CURRENT_USER </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">사용자 환경(감사 추적) </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">USERENV </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">CONNECT BY </span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">절의 수준 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">LEVEL </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">해당 없음 </span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 13.5pt;">집계 함수 </span></strong></p>
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">다음은 Oracle에서 지원하는 집계 함수 및 그에 상응하는 Microsoft SQL Server의 함수를 정리한 표입니다. </span></p>
+<table style="border: 1pt outset navy; width: 90%;" width="90%">
+<tbody>
+<tr>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">함수 설명 </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Oracle </span></strong></p>
+</td>
+<td style="background: silver; padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><strong><span style="color: #474747; font-family: 굴림; font-size: 12pt;">Microsoft SQL Server</span></strong></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">평균 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">AVG </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">AVG </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">개수 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">COUNT </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">COUNT </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">최대값 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">MAX </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">MAX </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">최소값 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">MIN </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">MIN </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">표준 편차 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">STDDEV </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">STDEV </span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">또는 STDEVP </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">합계 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SUM </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">SUM </span></p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 31%;" width="31%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">분산 </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 34%;" width="34%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">VARIANCE </span></p>
+</td>
+<td style="padding: 3.75pt; border: 1pt inset navy; width: 35%;" width="35%">
+<p style="text-align: left; -ms-word-break: keep-all;"><span style="color: #474747; font-family: 굴림; font-size: 12pt;">VAR </span><span style="color: #474747; font-family: 굴림; font-size: 12pt;">또는 VARP </span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 0px;"><br>\</p>
             
               
             </div>
@@ -296,7 +1133,7 @@ function googleTranslateElementInit() {
  
 </div>
 
-<footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-4o" data-rv-view="174" style="background-color: rgb(71, 85, 119);">
+<footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-4w" data-rv-view="190" style="background-color: rgb(71, 85, 119);">
     
     <div class="mbr-section__container container">
         <div class="mbr-footer mbr-footer--wysiwyg row" style="padding-top: 24.6px; padding-bottom: 24.6px;">
