@@ -993,7 +993,7 @@
  function resizeIframe(){
       var ifr = document.getElementById("if_sub");
       ifr.height = "0px";
-      ifr.height = ifr.contentWindow.document.body.scrollHeight*0.9 + "px";
+      ifr.height = ifr.contentWindow.document.body.scrollHeight*0.9 + "vh";
    }
 function calcHeight(){
  //find the height of the internal page
