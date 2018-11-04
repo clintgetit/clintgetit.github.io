@@ -994,7 +994,7 @@
  function resizeIframe(){
       var ifr = document.getElementById("if_sub");
       ifr.height = "0px";
-      ifr.height = ifr.contentWindow.document.body.scrollHeight*10 + "px";
+      ifr.height = ifr.contentWindow.document.body.scrollHeight + "px";
      //ifr.height = "90vh";
    }
 function calcHeight(){
