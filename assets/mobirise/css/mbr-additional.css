@@ -990,14 +990,12 @@
   text-align: center;
 }
  #my-iframe {display:block;border:none;height:90vh;width:100%;}
-<script type="text/javascript">
-   function resizeIframe(){
+ function resizeIframe(){
       var ifr = document.getElementById("if_sub");
       ifr.height = "0px";
       ifr.height = ifr.contentWindow.document.body.scrollHeight*0.9 + "px";
    }
-
-</script>}
+}
 
 #footer1-50 {
 }
