@@ -1026,3 +1026,59 @@
 #msg-box3-43 .mbr-header .mbr-header__subtext {
   text-align: center;
 }
+#dropdown-menu-45 .hide-buttons [data-button] {
+  display: none !important;
+}
+#dropdown-menu-45 .nav .link,
+#dropdown-menu-45 .dropdown-item {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+#dropdown-menu-45 .navbar,
+#dropdown-menu-45 .dropdown-menu {
+  background: #475577;
+}
+#dropdown-menu-45 .dropdown-menu .dropdown-toggle[aria-expanded="true"],
+#dropdown-menu-45 .dropdown-menu a:hover,
+#dropdown-menu-45 .dropdown-menu a:focus {
+  background: #3f4c6a;
+}
+#dropdown-menu-45 .navbar-toggler {
+  color: #ffffff;
+}
+#msg-box2-46 {
+  
+  
+  
+  
+  
+  
+}
+#msg-box2-46 .mbr-header .mbr-header__text {
+  color: #252525;
+}
+#msg-box2-46 .mbr-article {
+  color: #252525;
+}
+#msg-box2-46 .mbr-header .mbr-header__text {
+  color: #252525;
+  font-size: 20px;
+}
+#msg-box2-46 .mbr-article {
+  color: #252525;
+}
+#msg-box3-48 .mbr-header .mbr-header__text {
+  text-align: center;
+}
+#msg-box3-48 .mbr-header .mbr-header__subtext {
+  text-align: center;
+}
+#msg-box3-48 .mbr-article .mbr-article__text {
+  text-align: left;
+}
+#msg-box3-48 .mbr-article .mbr-article__subtext {
+  text-align: left;
+}
+#msg-box3-48 #menu div:hover {
+  background-color: #EFF5FB;
+}
