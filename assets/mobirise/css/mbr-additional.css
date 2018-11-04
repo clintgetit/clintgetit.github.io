@@ -989,3 +989,40 @@
 #msg-box3-3z .mbr-header .mbr-header__subtext {
   text-align: center;
 }
+#dropdown-menu-41 .hide-buttons [data-button] {
+  display: none !important;
+}
+#dropdown-menu-41 .nav .link,
+#dropdown-menu-41 .dropdown-item {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+#dropdown-menu-41 .navbar,
+#dropdown-menu-41 .dropdown-menu {
+  background: #475577;
+}
+#dropdown-menu-41 .dropdown-menu .dropdown-toggle[aria-expanded="true"],
+#dropdown-menu-41 .dropdown-menu a:hover,
+#dropdown-menu-41 .dropdown-menu a:focus {
+  background: #3f4c6a;
+}
+#dropdown-menu-41 .navbar-toggler {
+  color: #ffffff;
+}
+#content5-42 .mbr-header .mbr-header__text {
+  text-align: center;
+  color: #fff;
+}
+#content5-42 .mbr-header .mbr-header__subtext {
+  text-align: center;
+  color: #fff;
+}
+#content5-42 .mbr-article {
+  color: #fff;
+}
+#msg-box3-43 .mbr-header .mbr-header__text {
+  text-align: center;
+}
+#msg-box3-43 .mbr-header .mbr-header__subtext {
+  text-align: center;
+}
