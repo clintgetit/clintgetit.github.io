@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "ClintGetIT.com",
-    "currentPage": "test.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "default",
       "title": "Mobirise",
@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.8.6",
     "siteFonts": [],
-    "uniqCompNum": 153,
+    "uniqCompNum": 142,
     "versionPublish": "4.8.6",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -116,7 +116,7 @@
           "_afterNavbarItem": ".mbr-section > .mbr-box__magnet",
           "_name": "header2",
           "_anchor": "header2-7",
-          "_customHTML": "<section class=\"mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted\" data-rv-view=\"13\" style=\"background-color: rgb(40, 50, 78);\">\n    <div class=\"mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar\">\n        \n        <div class=\"mbr-box__container mbr-section__container container\">\n            <div class=\"mbr-box mbr-box--stretched\"><div class=\"mbr-box__magnet mbr-box__magnet--center-left\">\n                <div class=\"row\"><div class=\" col-sm-6 col-sm-offset-6\">\n                    <div class=\"mbr-hero animated fadeInUp\">\n                        <h1 class=\"mbr-hero__text mbr-editable-content\" code-editable-id=\"13\">ClintGetIT.com</h1>\n                        <p class=\"mbr-hero__subtext mbr-editable-content\" code-editable-id=\"14\">Clint's space for Information Techonology </p>\n                    </div>\n                    <div class=\"mbr-buttons btn-inverse mbr-buttons--left\"><a class=\"mbr-buttons__btn btn btn-lg btn-warning animated fadeInUp delay mbr-editable-button\" href=\"https://clintgetit.github.io/\" code-editable-id=\"15\">LEARN MORE</a></div>\n                </div></div>\n            </div></div>\n        </div>\n        \n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted\" data-rv-view=\"13\" style=\"background-color: rgb(40, 50, 78);\">\n    <div class=\"mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar\">\n        \n        <div class=\"mbr-box__container mbr-section__container container\">\n            <div class=\"mbr-box mbr-box--stretched\"><div class=\"mbr-box__magnet mbr-box__magnet--center-left\">\n                <div class=\"row\"><div class=\" col-sm-6 col-sm-offset-6\">\n                    <div class=\"mbr-hero animated fadeInUp\">\n                        <h1 class=\"mbr-hero__text mbr-editable-content\" code-editable-id=\"106\">ClintGetIT.com</h1>\n                        <p class=\"mbr-hero__subtext mbr-editable-content\" code-editable-id=\"107\">Clint's space for Information Techonology </p>\n                    </div>\n                    <div class=\"mbr-buttons btn-inverse mbr-buttons--left\"><a class=\"mbr-buttons__btn btn btn-lg btn-warning animated fadeInUp delay mbr-editable-button\" href=\"https://clintgetit.github.io/\" code-editable-id=\"108\">LEARN MORE</a></div>\n                </div></div>\n            </div></div>\n        </div>\n        \n    </div>\n</section>",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_customCSS": "",
@@ -206,6 +206,33 @@
               "color": "#efefef"
             }
           }
+        },
+        {
+          "_params": {
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "socialFacebook": true,
+            "postsNumber": 5,
+            "socialGoogle": false,
+            "socialDisqus": false,
+            "shortName": "",
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgImageRadio": false,
+            "bgImage": "@ADDONS_PATH@/facebook-comments/facebook-comments-block/assets/comments_bg.jpg",
+            "overlay": true,
+            "overlayColor": "#7e9b9f",
+            "overlayOpacity": 0.6
+          },
+          "innerText": "<div class=\"facebookPlaceholder\" data-numposts=\"\"><h2>FACEBOOK COMMENTS WILL BE SHOWN ONLY WHEN YOUR SITE IS ONLINE</h2> <img src=\"@PROJECT_PATH@/assets/images/facebook-comments.jpg\"></div>",
+          "innerTextGoogle": "<div class=\"googlePlaceholder\" data-numposts=\"\"><h2>GOOGLE COMMENTS WILL BE SHOWN ONLY WHEN YOUR SITE IS ONLINE</h2> <img src=\"@ADDONS_PATH@/facebook-comments/facebook-comments-block/assets/google-comments.jpg\"></div>",
+          "innerTextDisqus": "<div class=\"disqusPlaceholder\" data-numposts=\"\"><h2>DISQUS COMMENTS WILL BE SHOWN ONLY WHEN YOUR SITE IS ONLINE</h2> <img src=\"@ADDONS_PATH@/facebook-comments/facebook-comments-block/assets/disqus-comments.jpg\"></div>",
+          "alias": "facebook-comments",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "facebook-comments-block",
+          "_anchor": "facebook-comments-block-3x"
         }
       ]
     },
@@ -541,7 +568,12 @@
             "Extension"
           ],
           "_name": "facebook-comments-block",
-          "_anchor": "facebook-comments-block-26"
+          "_anchor": "facebook-comments-block-26",
+          "_customHTML": "<section class=\"mbr-section mbr-section__comments\" data-rv-view=\"21\" style=\"background-color: rgb(255, 255, 255); padding-top: 0rem; padding-bottom: 0rem;\">\n         \n    <div class=\"mbr-section__container mbr-section__container--isolated addons-container\">\n        <div class=\"addons-row\">\n            <div class=\"addons-container-inner\"><div class=\"facebookPlaceholder\" data-numposts=\"5\"><h2>FACEBOOK COMMENTS WILL BE SHOWN ONLY WHEN YOUR SITE IS ONLINE</h2> <img src=\"@PROJECT_PATH@/assets/images/facebook-comments.jpg\"></div></div>\n            \n           \n        </div>\n    </div>\n</section>",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_customCSS": "",
+          "_customTemplate": true
         },
         {
           "_params": {
@@ -884,7 +916,7 @@
             "Theme"
           ],
           "_name": "msg-box3",
-          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"101\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div id=\"menu\" class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 1px; padding-bottom: 1px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -20px;\" code-editable-id=\"70\"><a href=\"ios_detail_001.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>1.How can I make a site search on google from a Github site1?.</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n         <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -40px;\" code-editable-id=\"71\"><a href=\"ios_detail_001.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>1.How can I make a site search on google from a Github site2?.</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n        \n    </div>\n   <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 193px; padding-bottom: 1px;\">        \n    </div>\n\n</section>",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size\" data-rv-view=\"101\" style=\"background-color: rgb(255, 255, 255);\">\n    \n\n    <div id=\"menu\" class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 1px; padding-bottom: 1px;\">\n        <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -20px;\" code-editable-id=\"12\"><a href=\"ios_detail_001.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>1.How can I make a site search on google from a Github site1?.</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n         <div class=\"row\">\n            <div class=\"mbr-article mbr-article--wysiwyg col-sm-12 col-sm-offset-0 mbr-editable-full\" style=\"border: solid 0px #E6E6E6; margin-top: -40px;\" code-editable-id=\"13\"><a href=\"ios_detail_001.html\" onfocus=\"blur()\" style=\"text-decoration:none\"><h3><p>1.How can I make a site search on google from a Github site2?.</p></h3></a></div>\n        </div>\n        <hr style=\"border: solid 1px #E6E6E6; margin-top: 7px; text-align: left;\" width=\"70% \">\n        \n    </div>\n   <div class=\"mbr-section__container container mbr-section__container--middle\" style=\"padding-top: 193px; padding-bottom: 1px;\">        \n    </div>\n\n</section>",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_customCSS": ".mbr-header .mbr-header__text {\n  text-align: center;\n}\n.mbr-header .mbr-header__subtext {\n  text-align: center;\n}\n.mbr-article .mbr-article__text {\n  text-align: left;\n}\n.mbr-article .mbr-article__subtext {\n  text-align: left;\n}\n#menu div:hover{                                       \n  background-color: #EFF5FB;\n}\n\n",
@@ -3670,19 +3702,6 @@
         },
         {
           "_inherit": "msg-box3",
-          "_styles": {
-            ".mbr-header .mbr-header__text": {
-              "text-align": "center",
-              "color": "#fff"
-            },
-            ".mbr-header .mbr-header__subtext": {
-              "text-align": "center",
-              "color": "#fff"
-            },
-            ".mbr-article": {
-              "color": "#fff"
-            }
-          },
           "_params": {
             "showTitle": true,
             "showMeta": false,
@@ -3713,7 +3732,12 @@
           ],
           "meta": "By John Smith posted July 30, 2015",
           "_name": "content5",
-          "_anchor": "content5-4y"
+          "_anchor": "content5-4y",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--fixed-size mbr-parallax-background mbr-after-navbar\" data-rv-view=\"169\" style=\"background-image: url(&quot;images/bg3.jpg&quot;);\">\n    <div class=\"mbr-overlay\" style=\"opacity: 0.2; background-color: rgb(40, 50, 78);\"></div>\n    <div class=\"mbr-section__container container mbr-section__container--isolated\" style=\"padding-top: 93px; padding-bottom: 62px;\">\n        <div class=\"mbr-header mbr-header--wysiwyg row\">\n            <div class=\"col-sm-8 col-sm-offset-2\">\n                <h3 class=\"mbr-header__text mbr-editable-content\" code-editable-id=\"109\">TEST</h3>\n                \n            </div>\n        </div>\n    </div>\n    \n    \n</section>",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_customCSS": ".mbr-header .mbr-header__text {\n  text-align: center;\n  color: #fff;\n}\n.mbr-header .mbr-header__subtext {\n  text-align: center;\n  color: #fff;\n}\n.mbr-article {\n  color: #fff;\n}\n",
+          "_customTemplate": true
         },
         {
           "_params": {
