@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "ClintGetIT.com",
-    "currentPage": "ios.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "default",
       "title": "Mobirise",
@@ -11,7 +11,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.8.6",
     "siteFonts": [],
-    "uniqCompNum": 163,
+    "uniqCompNum": 141,
     "versionPublish": "4.8.6",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -69,7 +69,22 @@
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_customCSS": ".hide-buttons [data-button] {\n  display: none !important;\n}\n.navbar-brand a {\n}\n.nav .link, .dropdown-item {\n  font-size: 1.2em;\n  color: #ffffff;\n}\n.navbar, .dropdown-menu {\n  background: #475577;\n}\n.dropdown-menu .dropdown-toggle[aria-expanded=\"true\"], .dropdown-menu a:hover, .dropdown-menu a:focus {\n  background: #3f4c6a;\n}\n.navbar-toggler {\n  color: #ffffff;\n}\n",
-          "_customTemplate": true
+          "_customTemplate": true,
+          "_styles": {
+            ".nav .link, .dropdown-item": {
+              "font-size": "1.2em",
+              "color": "#ffffff"
+            },
+            ".navbar, .dropdown-menu": {
+              "background": "#475577"
+            },
+            ".dropdown-menu .dropdown-toggle[aria-expanded=\"true\"], .dropdown-menu a:hover, .dropdown-menu a:focus": {
+              "background": "#3f4c6a"
+            },
+            ".navbar-toggler": {
+              "color": "#ffffff"
+            }
+          }
         },
         {
           "_inherit": "header1",
@@ -101,7 +116,7 @@
           "_afterNavbarItem": ".mbr-section > .mbr-box__magnet",
           "_name": "header2",
           "_anchor": "header2-7",
-          "_customHTML": "<section class=\"mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted\" data-rv-view=\"13\" style=\"background-color: rgb(40, 50, 78);\">\n    <div class=\"mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar\">\n        \n        <div class=\"mbr-box__container mbr-section__container container\">\n            <div class=\"mbr-box mbr-box--stretched\"><div class=\"mbr-box__magnet mbr-box__magnet--center-left\">\n                <div class=\"row\"><div class=\" col-sm-6 col-sm-offset-6\">\n                    <div class=\"mbr-hero animated fadeInUp\">\n                        <h1 class=\"mbr-hero__text mbr-editable-content\" code-editable-id=\"274\">ClintGetIT.com</h1>\n                        <p class=\"mbr-hero__subtext mbr-editable-content\" code-editable-id=\"275\">Clint's space for Information Techonology </p>\n                    </div>\n                    <div class=\"mbr-buttons btn-inverse mbr-buttons--left\"><a class=\"mbr-buttons__btn btn btn-lg btn-warning animated fadeInUp delay mbr-editable-button\" href=\"https://clintgetit.github.io/\" code-editable-id=\"276\">LEARN MORE</a></div>\n                </div></div>\n            </div></div>\n        </div>\n        \n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted\" data-rv-view=\"13\" style=\"background-color: rgb(40, 50, 78);\">\n    <div class=\"mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar\">\n        \n        <div class=\"mbr-box__container mbr-section__container container\">\n            <div class=\"mbr-box mbr-box--stretched\"><div class=\"mbr-box__magnet mbr-box__magnet--center-left\">\n                <div class=\"row\"><div class=\" col-sm-6 col-sm-offset-6\">\n                    <div class=\"mbr-hero animated fadeInUp\">\n                        <h1 class=\"mbr-hero__text mbr-editable-content\" code-editable-id=\"12\">ClintGetIT.com</h1>\n                        <p class=\"mbr-hero__subtext mbr-editable-content\" code-editable-id=\"13\">Clint's space for Information Techonology </p>\n                    </div>\n                    <div class=\"mbr-buttons btn-inverse mbr-buttons--left\"><a class=\"mbr-buttons__btn btn btn-lg btn-warning animated fadeInUp delay mbr-editable-button\" href=\"https://clintgetit.github.io/\" code-editable-id=\"14\">LEARN MORE</a></div>\n                </div></div>\n            </div></div>\n        </div>\n        \n    </div>\n</section>",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_customCSS": "",
@@ -4379,7 +4394,7 @@
             "Theme"
           ],
           "_name": "msg-box2",
-          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--short-paddings\" data-rv-view=\"161\" style=\"background-color: rgb(255, 255, 255);\">\n\n    \n\n    <div class=\"mbr-section__container mbr-section__container--isolated container\" style=\"padding-top: 10px; padding-bottom: 10px; bodder = 1px;\">\n        <div class=\"row\">\n            <div class=\"mbr-box mbr-box--fixed mbr-box--adapted\">\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__left col-sm-12\">\n                    <div class=\"mbr-section__container\">\n                        <div class=\"mbr-header mbr-header--auto-align mbr-header--wysiwyg\">\n                            <h3 class=\"mbr-header__text mbr-editable-content\" style=\"font-family: Roboto, sans-serif; font-size: 27px; text-align: left; color: rgb(71, 85, 119);\" code-editable-id=\"283\">Education - online</h3>\n                        </div>\n<hr style=\"border: solid 1px #E6E6E6; margin-top: 5px; text-align: left;\" width=\"10% \">\n                    </div>\n                    \n                </div>\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__right col-sm-4\">\n                     \n                </div>\n            </div>\n        </div>\n    </div>\n   <div class=\"mbr-section__container container mbr-section__container--left\" style=\"padding-top: 25px; padding-bottom: 1px;\"> \n         </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section mbr-section--relative mbr-section--short-paddings\" data-rv-view=\"161\" style=\"background-color: rgb(255, 255, 255);\">\n\n    \n\n    <div class=\"mbr-section__container mbr-section__container--isolated container\" style=\"padding-top: 10px; padding-bottom: 10px; bodder = 1px;\">\n        <div class=\"row\">\n            <div class=\"mbr-box mbr-box--fixed mbr-box--adapted\">\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__left col-sm-12\">\n                    <div class=\"mbr-section__container\">\n                        <div class=\"mbr-header mbr-header--auto-align mbr-header--wysiwyg\">\n                            <h3 class=\"mbr-header__text mbr-editable-content\" style=\"font-family: Roboto, sans-serif; font-size: 27px; text-align: left; color: rgb(71, 85, 119);\" code-editable-id=\"486\">Education - online</h3>\n                        </div>\n<hr style=\"border: solid 1px #E6E6E6; margin-top: 5px; text-align: left;\" width=\"10% \">\n                    </div>\n                    \n                </div>\n                <div class=\"mbr-box__magnet mbr-box__magnet--top-left mbr-section__right col-sm-4\">\n                     \n                </div>\n            </div>\n        </div>\n    </div>\n   <div class=\"mbr-section__container container mbr-section__container--left\" style=\"padding-top: 25px; padding-bottom: 1px;\"> \n         </div>\n</section>",
           "_customCSS": "@import url(undefined);\n@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lora:400,700);\n@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);\n@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n.mbr-header .mbr-header__text {\n  color: #252525;\n  font-size: 20px;\n}\n.mbr-article {\n  color: #252525;\n}\n\n",
           "_customTemplate": true,
           "_PHPplaceholders": [],

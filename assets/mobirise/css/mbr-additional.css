@@ -5,6 +5,23 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+#dropdown-menu-g .nav .link,
+#dropdown-menu-g .dropdown-item {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+#dropdown-menu-g .navbar,
+#dropdown-menu-g .dropdown-menu {
+  background: #475577;
+}
+#dropdown-menu-g .dropdown-menu .dropdown-toggle[aria-expanded="true"],
+#dropdown-menu-g .dropdown-menu a:hover,
+#dropdown-menu-g .dropdown-menu a:focus {
+  background: #3f4c6a;
+}
+#dropdown-menu-g .navbar-toggler {
+  color: #ffffff;
+}
 #dropdown-menu-g .hide-buttons [data-button] {
   display: none !important;
 }
